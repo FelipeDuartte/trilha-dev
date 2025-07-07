@@ -1,0 +1,271 @@
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #f72585;
+  --dark: #0a0a19;
+  --darker: #141432;
+  --light: #f8f9fa;
+  --gray: #e2e8f0;
+  --tech-gradient: linear-gradient(135deg, var(--primary), var(--accent));
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.8rem;
+  background: var(--tech-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--gray);
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Timeline Guide */
+.learning-path {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Linha central da timeline */
+.learning-path::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--tech-gradient);
+  border-radius: 2px;
+}
+
+/* Cards de aprendizado */
+.step {
+  position: relative;
+  width: calc(50% - 2rem);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  background: var(--darker);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+/* Posicionamento alternado */
+.step:nth-child(odd) {
+  margin-left: auto;
+}
+
+.step:nth-child(even) {
+  margin-right: auto;
+}
+
+/* Marcadores da timeline */
+.step::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--tech-gradient);
+  border: 4px solid var(--dark);
+}
+
+.step:nth-child(odd)::before {
+  left: -36px;
+}
+
+.step:nth-child(even)::before {
+  right: -36px;
+}
+
+/* Conteúdo dos cards */
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(67, 97, 238, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+.step-subtitle {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step-content {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.step-topics {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.step-topics li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.step-topics li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.step-resources {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resources-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.resources-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.resource-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resource-category h4 {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--primary);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 3px solid var(--primary);
+}
+
+.resource-link:hover {
+  background: rgba(67, 97, 238, 0.2);
+  transform: translateX(4px);
+}
+
+/* Efeitos de hover */
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .learning-path::before {
+    left: 2rem;
+  }
+
+  .step {
+    width: calc(100% - 4rem);
+    margin-left: 2rem !important;
+    margin-right: 0 !important;
+  }
+
+  .step:nth-child(odd)::before,
+  .step:nth-child(even)::before {
+    left: -28px;
+    right: auto;
+  }
+
+  .resources-links {
+    flex-direction: column;
+  }
+  
+  .resource-category {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .step {
+    padding: 1.5rem;
+  }
+  
+  .step-title {
+    font-size: 1.3rem;
+  }
+}
