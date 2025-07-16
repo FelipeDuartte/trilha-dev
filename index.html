@@ -20,8 +20,6 @@
 </head>
 
 <body class="bg-dark text-light">
-    <!-- Efeito de Partículas -->
-    <div id="particles-js"></div>
 
     <!-- Header -->
     <header class="fixed-top py-3 bg-dark bg-opacity-90 backdrop-blur border-bottom border-primary border-opacity-25">
@@ -31,7 +29,7 @@
                     <a class="navbar-brand p-0" href="#">
                         <div class="logo">
                             <h1 class="m-0 fs-3 fw-bold gradient-text JornadaDEV">Jornada<span>DEV</span></h1>
-                            <p class="m-0 text-muted p-header">Seu guia para o mundo digital</p>
+                            <p class="m-0 p-header">Seu guia para o mundo digital</p>
                         </div>
                     </a>
                     
@@ -74,9 +72,9 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <h1 id="typing-title" class="display-4 fw-bold mb-4">Transforme linhas de código em <span class="text-primary">realidade digital</span></h1>
-                    <p class=" text-muted mb-4 fs-6 ">Domine as tecnologias que estão moldando o futuro</p>
+                    <p class=" mb-4 fs-6 ">Domine as tecnologias que estão moldando o futuro</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#tracks" class="btn btnExplorarTrilha btn-primary btn-lg px-4 py-3 btn-pulse justify-content-center align-items-center fw-bold">
+                        <a href="#tracks" class="btn btnExplorarTrilha btn-primary btn-lg px-4 py-3 justify-content-center align-items-center fw-bold">
                             Explorar Trilhas <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                         
@@ -107,43 +105,43 @@ function iniciarJornada() {
     <section id="tracks" class="py-5 bg-dark bg-opacity-50">
         <div class="container py-5">
             <h2 class="section-title display-5 fw-bold text-center mb-3 gradient-text">Escolha sua Trilha</h2>
-            <p class="section-subtitle text-center text-muted mb-5 mx-auto" style="max-width: 700px;">Selecione o caminho que deseja seguir</p>
+            <p class="section-subtitle text-center mb-5 mx-auto" style="max-width: 700px;">Selecione o caminho que deseja seguir</p>
             
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
-                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow">
+                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow d-flex flex-column justify-content-center align-items-center">
                         <div class="track-icon mx-auto mb-4 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
                             <i class="fas fa-laptop-code fs-3 text-primary"></i>
                         </div>
                         <h3 class="text-center mb-3">Front-end</h3>
-                        <p class="text-center text-muted mb-4">Desenvolva interfaces interativas e responsivas</p>
-                        <a href="front-end.html" class="btn btn-trilhas d-flex w-50  align-items-center justify-content-center">
+                        <p class="text-center mb-4">Desenvolva interfaces interativas e responsivas</p>
+                        <a href="front-end.html" class="btn btn-trilhas d-flex justify-content-center align-items-center p-2">
                             Ver Trilha <i class="fa-solid fa-plane ms-2"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow">
+                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow d-flex flex-column justify-content-center align-items-center">
                         <div class="track-icon mx-auto mb-4 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
                             <i class="fas fa-server fs-3 text-primary"></i>
                         </div>
                         <h3 class="text-center mb-3">Back-end</h3>
-                        <p class="text-center text-muted mb-4">Construa a lógica e infraestrutura por trás das aplicações</p>
-                        <a href="back-end.html" class="btn btn-trilhas">
+                        <p class="text-center mb-4">Construa a lógica e infraestrutura por trás das aplicações</p>
+                        <a href="back-end.html" class="btn btn-trilhas d-flex justify-content-center align-items-center p-2">
                             Ver Trilha <i class="fa-solid fa-plane ms-2"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow">
+                    <div class="track-card h-100 p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow d-flex flex-column justify-content-center align-items-center">
                         <div class="track-icon mx-auto mb-4 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
                             <i class="fas fa-code fs-3 text-primary"></i>
                         </div>
                         <h3 class="text-center mb-3">Full Stack</h3>
-                        <p class="text-center text-muted mb-4">Domine tanto o front-end quanto o back-end</p>
-                        <a href="full-stack.html" class="btn btn-trilhas">
+                        <p class="text-center mb-4">Domine tanto o front-end quanto o back-end</p>
+                        <a href="full-stack.html" class="btn btn-trilhas d-flex justify-content-center align-items-center p-2">
                             Ver Trilha <i class="fa-solid fa-plane ms-2"></i>
                         </a>
                     </div>
@@ -163,9 +161,9 @@ function iniciarJornada() {
                     <div class="resource-card h-100 p-4 bg-glass rounded-3 border border-light border-opacity-10 shadow">
                         <h3 class="fs-5 mb-3"><i class="fas fa-book me-2 text-primary"></i> Documentações</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="https://developer.mozilla.org" target="_blank" class="text-muted text-decoration-none hover-accent">MDN Web Docs</a></li>
-                            <li class="mb-2"><a href="https://devdocs.io" target="_blank" class="text-muted text-decoration-none hover-accent">DevDocs</a></li>
-                            <li><a href="https://www.freecodecamp.org" target="_blank" class="text-muted text-decoration-none hover-accent">freeCodeCamp</a></li>
+                            <li class="mb-2"><a href="https://developer.mozilla.org" target="_blank" class=" text-decoration-none hover-accent">MDN Web Docs</a></li>
+                            <li class="mb-2"><a href="https://devdocs.io" target="_blank" class=" text-decoration-none hover-accent">DevDocs</a></li>
+                            <li><a href="https://www.freecodecamp.org" target="_blank" class="text-decoration-none hover-accent">freeCodeCamp</a></li>
                         </ul>
                     </div>
                 </div>
@@ -174,9 +172,9 @@ function iniciarJornada() {
                     <div class="resource-card h-100 p-4 bg-glass rounded-3 border border-light border-opacity-10 shadow">
                         <h3 class="fs-5 mb-3"><i class="fas fa-video me-2 text-primary"></i> Cursos Online</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="https://www.udemy.com" target="_blank" class="text-muted text-decoration-none hover-accent">Udemy</a></li>
-                            <li class="mb-2"><a href="https://www.coursera.org" target="_blank" class="text-muted text-decoration-none hover-accent">Coursera</a></li>
-                            <li><a href="https://www.alura.com.br" target="_blank" class="text-muted text-decoration-none hover-accent">Alura</a></li>
+                            <li class="mb-2"><a href="https://www.udemy.com" target="_blank" class=" text-decoration-none hover-accent">Udemy</a></li>
+                            <li class="mb-2"><a href="https://www.coursera.org" target="_blank" class=" text-decoration-none hover-accent">Coursera</a></li>
+                            <li><a href="https://www.alura.com.br" target="_blank" class=" text-decoration-none hover-accent">Alura</a></li>
                         </ul>
                     </div>
                 </div>
@@ -185,9 +183,9 @@ function iniciarJornada() {
                     <div class="resource-card h-100 p-4 bg-glass rounded-3 border border-light border-opacity-10 shadow">
                         <h3 class="fs-5 mb-3"><i class="fas fa-tools me-2 text-primary"></i> Ferramentas</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="https://code.visualstudio.com" target="_blank" class="text-muted text-decoration-none hover-accent">VS Code</a></li>
-                            <li class="mb-2"><a href="https://www.postman.com" target="_blank" class="text-muted text-decoration-none hover-accent">Postman</a></li>
-                            <li><a href="https://www.figma.com" target="_blank" class="text-muted text-decoration-none hover-accent">Figma</a></li>
+                            <li class="mb-2"><a href="https://code.visualstudio.com" target="_blank" class=" text-decoration-none hover-accent">VS Code</a></li>
+                            <li class="mb-2"><a href="https://www.postman.com" target="_blank" class=" text-decoration-none hover-accent">Postman</a></li>
+                            <li><a href="https://www.figma.com" target="_blank" class=" text-decoration-none hover-accent">Figma</a></li>
                         </ul>
                     </div>
                 </div>
@@ -196,9 +194,9 @@ function iniciarJornada() {
                     <div class="resource-card h-100 p-4 bg-glass rounded-3 border border-light border-opacity-10 shadow">
                         <h3 class="fs-5 mb-3"><i class="fas fa-comments me-2 text-primary"></i> Comunidades</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="https://stackoverflow.com" target="_blank" class="text-muted text-decoration-none hover-accent">Stack Overflow</a></li>
-                            <li class="mb-2"><a href="https://github.com" target="_blank" class="text-muted text-decoration-none hover-accent">GitHub</a></li>
-                            <li><a href="https://dev.to" target="_blank" class="text-muted text-decoration-none hover-accent">DEV Community</a></li>
+                            <li class="mb-2"><a href="https://stackoverflow.com" target="_blank" class=" text-decoration-none hover-accent">Stack Overflow</a></li>
+                            <li class="mb-2"><a href="https://github.com" target="_blank" class=" text-decoration-none hover-accent">GitHub</a></li>
+                            <li><a href="https://dev.to" target="_blank" class=" text-decoration-none hover-accent">DEV Community</a></li>
                         </ul>
                     </div>
                 </div>
@@ -210,14 +208,14 @@ function iniciarJornada() {
     <section id="about" class="py-5 bg-dark bg-opacity-50">
         <div class="container py-5">
             <h2 class="section-title display-5 fw-bold text-center mb-3 gradient-text">Sobre o <span class="gradient-text">JornadaDEV</span></h2>
-            <p class="section-subtitle text-center text-muted mb-5 mx-auto" style="max-width: 700px;">Um projeto independente para ajudar desenvolvedores</p>
+            <p class="section-subtitle text-center  mb-5 mx-auto" style="max-width: 700px;">Um projeto independente para ajudar desenvolvedores</p>
             
             <div class="row g-5">
                 <div class="col-lg-5">
                     <div class="developer-card p-4 bg-glass rounded-4 border border-light border-opacity-10 shadow">
                         <div class="dev-info">
                             <h3 class="fs-3 mb-3 text-primary">Olá, eu sou Felipe Duarte!</h3>
-                            <p class="text-muted mb-4">Desenvolvedor autodidata que decidiu compartilhar o caminho que percorri para aprender.</p>
+                            <p class="mb-4">Desenvolvedor autodidata que decidiu compartilhar o caminho que percorri para aprender.</p>
                             <a href="https://github.com/seuuser" target="_blank" class="btn btn-outline-primary">
                                 <i class="fab fa-github me-2"></i> Meu GitHub
                             </a>
@@ -233,7 +231,7 @@ function iniciarJornada() {
                                     <i class="fas fa-lightbulb text-primary"></i>
                                 </div>
                                 <h3 class="fs-5 mb-2">Como surgiu</h3>
-                                <p class="text-muted m-0">Depois de passar por muitas dificuldades para aprender desenvolvimento front-end de forma estruturada, decidi criar este guia para ajudar outros que estão começando.</p>
+                                <p class=" m-0">Depois de passar por muitas dificuldades para aprender desenvolvimento front-end de forma estruturada, decidi criar este guia para ajudar outros que estão começando.</p>
                             </div>
                         </div>
                         
@@ -243,7 +241,7 @@ function iniciarJornada() {
                                     <i class="fas fa-heart text-primary"></i>
                                 </div>
                                 <h3 class="fs-5 mb-2">Filosofia</h3>
-                                <p class="text-muted m-0">Acredito que o conhecimento deve ser compartilhado de forma acessível e prática. Todo o conteúdo aqui é baseado na minha experiência real de aprendizado.</p>
+                                <p class=" m-0">Acredito que o conhecimento deve ser compartilhado de forma acessível e prática. Todo o conteúdo aqui é baseado na minha experiência real de aprendizado.</p>
                             </div>
                         </div>
                         
@@ -253,14 +251,14 @@ function iniciarJornada() {
                                     <i class="fas fa-sync-alt text-primary"></i>
                                 </div>
                                 <h3 class="fs-5 mb-2">Atualizações</h3>
-                                <p class="text-muted m-0">Mantenho o projeto atualizado conforme aprendo novas tecnologias e recebo feedbacks da comunidade.</p>
+                                <p class=" m-0">Mantenho o projeto atualizado conforme aprendo novas tecnologias e recebo feedbacks da comunidade.</p>
                             </div>
                         </div>
                         
                         <div class="col-md-6">
                             <div class="call-to-action h-100 p-4 bg-glass rounded-3 border border-primary border-opacity-50 shadow d-flex flex-column justify-content-center">
                                 <h3 class="fs-5 mb-2">Quer contribuir ou sugerir melhorias?</h3>
-                                <p class="text-muted mb-3">Este é um projeto aberto e em constante evolução. Sua opinião é valiosa!</p>
+                                <p class=" mb-3">Este é um projeto aberto e em constante evolução. Sua opinião é valiosa!</p>
                                 <a href="mailto:seuemail@exemplo.com" class="btn btn-primary">
                                     <i class="fas fa-envelope me-2"></i> Enviar sugestão
                                 </a>
@@ -278,22 +276,22 @@ function iniciarJornada() {
             <div class="row g-4">
                 <div class="col-lg-3">
                     <h3 class="h5 mb-3 text-primary">JornadaDEV</h3>
-                    <p class="text-muted small">Seu guia para se tornar um desenvolvedor completo.</p>
+                    <p class=" small">Seu guia para se tornar um desenvolvedor completo.</p>
                 </div>
                 
                 <div class="col-lg-3">
                     <h3 class="h5 mb-3 text-primary">Links Rápidos</h3>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home" class="text-muted text-decoration-none hover-accent">Início</a></li>
-                        <li class="mb-2"><a href="#tracks" class="text-muted text-decoration-none hover-accent">Trilhas</a></li>
-                        <li class="mb-2"><a href="#resources" class="text-muted text-decoration-none hover-accent">Recursos</a></li>
-                        <li><a href="#about" class="text-muted text-decoration-none hover-accent">Sobre</a></li>
+                        <li class="mb-2"><a href="#home" class=" text-decoration-none hover-accent">Início</a></li>
+                        <li class="mb-2"><a href="#tracks" class=" text-decoration-none hover-accent">Trilhas</a></li>
+                        <li class="mb-2"><a href="#resources" class=" text-decoration-none hover-accent">Recursos</a></li>
+                        <li><a href="#about" class=" text-decoration-none hover-accent">Sobre</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-3">
                     <h3 class="h5 mb-3 text-primary">Contato</h3>
-                    <ul class="list-unstyled text-muted">
+                    <ul class="list-unstyled ">
                         <li class="mb-2"><i class="fas fa-envelope me-2"></i> xxxxx@xxxx.xxx</li>
                         <li><i class="fas fa-globe me-2"></i> www.xxxxxx.com</li>
                     </ul>
@@ -302,17 +300,17 @@ function iniciarJornada() {
                 <div class="col-lg-3">
                     <h3 class="h5 mb-3 text-primary">Redes Sociais</h3>
                     <div class="social-icons d-flex gap-3">
-                        <a href="#" class="text-muted hover-accent"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-muted hover-accent"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-muted hover-accent"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-muted hover-accent"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class=" hover-accent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class=" hover-accent"><i class="fab fa-github"></i></a>
+                        <a href="#" class=" hover-accent"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class=" hover-accent"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom text-center mt-5 pt-4 border-top border-light border-opacity-10">
-                <p class="text-muted small mb-2">&copy; 2025 JornadaDEV. Todos os direitos reservados.</p>
-                <p class="text-muted small">- Desenvolvido por <strong>Felipe Duarte 👨‍💻</strong></p>
+                <p class=" small mb-2">&copy; 2025 JornadaDEV. Todos os direitos reservados.</p>
+                <p class=" small">- Desenvolvido por <strong>Felipe Duarte 👨‍💻</strong></p>
             </div>
         </div>
     </footer>
