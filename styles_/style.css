@@ -56,11 +56,23 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   letter-spacing: -0.015em;}
 
-h1 {
+h1.JornadaDEV {
+  background: linear-gradient(45deg, #9c27b0, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 3.5rem;
   font-weight: 800;}
 
+p.p-header{
+  font-size: small;
+  font-style: italic;}
+
 h2 {
+   background: linear-gradient(120deg, #4a148c, #1565c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;}
 
@@ -72,10 +84,6 @@ p {
   font-size: 1.1rem;
   color: var(--gray);}
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;}
-
 .text-gradient {
   background: var(--tech-gradient);
   -webkit-background-clip: text;
@@ -83,17 +91,12 @@ p {
   color: transparent;
   display: inline-block;}
 
-.btn {
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: none;
+.btnExplorarTrilha {
+  letter-spacing: 0.05em;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  overflow: hidden;
   border: none;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;}
 
 .btn-lg {
@@ -106,14 +109,12 @@ p {
   color: white;
   box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
   position: relative;
-  z-index: 1;
-}
+  z-index: 1;}
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(67, 97, 238, 0.6);
-  color: white;
-}
+  color: white;}
 
 .btn-primary::before {
   content: '';
@@ -125,8 +126,7 @@ p {
   background: linear-gradient(135deg, var(--primary-light), var(--accent));
   opacity: 0;
   z-index: -1;
-  transition: opacity 0.3s ease;
-}
+  transition: opacity 0.3s ease;}
 
 .btn-primary:hover::before {
   opacity: 1;
@@ -199,8 +199,7 @@ p {
 }
 
 .text-muted {
-  color: var(--gray) !important;
-  opacity: 0.9;
+color: darkgray !important;
 }
 
 .text-accent {
@@ -232,6 +231,47 @@ p {
   transform: scaleX(1);
 }
 
+.btn-trilhas {
+  display: inline-block;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+}
+
+.btn-trilhas::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.3) 50%, 
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s;
+}
+
+.btn-trilhas:hover::after {
+  left: 100%;
+}
+
+.btn-trilhas:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+}
 /* ===== AJUSTES RESPONSIVOS ===== */
 @media (max-width: 992px) {
   h1 {
