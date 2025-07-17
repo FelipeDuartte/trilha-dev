@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Limpa o conteúdo antes de começar a digitação
   element.innerHTML = "";
   typeWriter();
 });

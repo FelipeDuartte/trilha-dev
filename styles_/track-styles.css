@@ -140,32 +140,6 @@ h1 {
   transition: opacity 0.3s ease;
 }
 
-/* Efeito de borda animada - versão com JS (descomente para usar) */
-/*
-.step::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: -1;
-  background: radial-gradient(
-    circle at var(--border-x) var(--border-y),
-    var(--primary),
-    var(--accent),
-    transparent 70%
-  );
-  border-radius: 18px;
-  opacity: 0;
-  transition: opacity 0.3s ease, background 0.3s ease;
-}
-*/
-
-.step:hover::before {
-  opacity: 1;
-}
-
 @keyframes border-flow {
   0% {
     background-position: 0% 50%;
