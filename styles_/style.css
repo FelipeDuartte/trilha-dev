@@ -80,8 +80,7 @@ h1.JornadaDEV {
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(127, 0, 255, 0.3);
-  font-family: 'Orbitron', sans-serif; 
-}
+  font-family: 'Orbitron', sans-serif; }
 
 .gradient-span {
   background: linear-gradient(90deg, #00f0ff, #7f00ff);
@@ -126,6 +125,17 @@ h2 {
 h3 {
 font-size: 1.75rem;
 font-family: "Roboto", sans-serif;}
+
+.h5{
+  font-weight: 600;
+  letter-spacing: 0.05px;
+  background: linear-gradient(120deg, #00f0ff, #7f00ff, #00f0ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(127, 0, 255, 0.3);
+  font-family: 'Orbitron', sans-serif; }
 
 .p-hero{
     font-family: 'Orbitron', sans-serif;}
@@ -200,7 +210,7 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
     box-shadow: 0 0 0 0 rgba(67, 97, 238, 0);
   }}
 
-.btn-trilhas, .btn-Github{
+.btn-trilhas{
   background: linear-gradient(90deg, #0d1a2f, #112244);
   width: 160px;
   color: #b8d1ff;
@@ -218,7 +228,7 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
   will-change: transform, box-shadow, text-shadow;
   text-shadow: 0 0 4px rgba(120, 180, 255, 0.3);}
 
-.btn-trilhas::before, .btn-Github::before {
+.btn-trilhas::before {
   content: '';
   position: absolute;
   top: 0;
@@ -233,10 +243,10 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
   );
   transition: 0.6s ease;}
 
-.btn-trilhas:hover::before, .btn-Github:hover::before {
+.btn-trilhas:hover::before {
   left: 100%;}
 
-.btn-trilhas::after, .btn-Github::after {
+.btn-trilhas::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -251,10 +261,10 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
   transform: rotate(30deg);
   transition: all 0.7s ease;}
 
-.btn-trilhas:hover::after, .btn-Github:hover::after {
+.btn-trilhas:hover::after{
   left: 100%;}
 
-.btn-trilhas:hover, .btn-Github:hover {
+.btn-trilhas:hover{
   background-color: #091323;
   transform: translateY(-3px);
   box-shadow: 0 0 16px rgba(0, 119, 255, 0.4),
@@ -280,26 +290,63 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
   );
   pointer-events: none;}
   
-  .btn-mail {
-  background: linear-gradient(90deg, #00f0ff, #7f00ff);
-  color: #ffffff;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 24px;
-  font-size: 1rem;
+.btn-tech-github {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border: 2px solid #1565c0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  background: transparent;
+  text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);}
+  position: relative;
+  overflow: hidden;
+  z-index: 1;}
 
-.btn-mail i {
-  font-size: 1.1rem;}
+.btn-tech-github::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d1a2f, #1b2b48, #00f2ff33);
+  transition: width 0.4s ease;
+  z-index: -1;}
 
-.btn-mail:hover {
-  background: linear-gradient(90deg, #7f00ff, #00f0ff);
-  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.5);
-  transform: translateY(-2px);}
+.btn-tech-github:hover::before {
+  width: 100%;}
+
+.btn-tech-github:hover {
+  color: #ffffff;
+  border-color: #00f2ff8e;
+  box-shadow: 0 0 12px #00f2ff88;}
+
+
+ .btn-mail-simple {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1a2c47;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-mail-simple:hover {
+  background-color: #223a5f;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+}
+
 
   /* ===== AJUSTES RESPONSIVOS ===== */
 @media (max-width: 992px) {
