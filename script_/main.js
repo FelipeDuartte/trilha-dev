@@ -21,3 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
   element.innerHTML = "";
   typeWriter();
 });
+ function revealCardsOnScroll() {
+    const cards = document.querySelectorAll('.track-card');
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+
+      if (cardTop < triggerBottom) {
+        card.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealCardsOnScroll);
+  window.addEventListener('load', revealCardsOnScroll);
+  function revealOnScroll() {
+    const elements = document.querySelectorAll('.fade-up');
+    const triggerBottom = window.innerHeight * 0.9;
+
+    elements.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
