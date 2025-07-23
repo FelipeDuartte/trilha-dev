@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fullText = "Transforme linhas de código em realidade digital";
   const highlight = "realidade digital";
   const typingSpeed = 60;
-  let i = 0;
-
+  let i = 0
   function typeWriter() {
     if (i < fullText.length) {
       const current = fullText.substring(0, i + 1);
