@@ -16,19 +16,25 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
-// Adicione ao seu script.js
-document.querySelectorAll('.step').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    card.style.setProperty('--border-x', `${x}px`);
-    card.style.setProperty('--border-y', `${y}px`);
-  });
-  
-  card.addEventListener('mouseleave', () => {
-    card.style.setProperty('--border-x', '50%');
-    card.style.setProperty('--border-y', '50%');
-  });
-});
+//links aparecendo e escondendo
+ document.addEventListener('DOMContentLoaded', function() {
+
+        const toggleButtons = document.querySelectorAll('.toggle-resources');
+        
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const links = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (links.style.display === 'none' || !links.style.display) {
+                    links.style.display = 'flex';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    links.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    });
