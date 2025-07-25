@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const element = document.getElementById("typing-title");
-  const fullText = "Transforme linhas de código em realidade digital";
-  const highlight = "realidade digital";
+  const fullText = "O caminho certo para você se tornar um desenvolvedor de sucesso.";
+  const highlight = "desenvolvedor de sucesso.";
   const typingSpeed = 60;
   let i = 0
   function typeWriter() {

@@ -90,6 +90,7 @@ h1.JornadaDEV {
 }
 
 #home {
+  min-height: 90vh;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-out forwards 0.5s;
@@ -632,6 +633,7 @@ background: linear-gradient(to right, #673ab7, #3a50b7);
 }
 
 @media (max-width: 768px) {
+
   h1 {
     font-size: 2.2rem;
   }
