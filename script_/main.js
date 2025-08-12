@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const current = fullText.substring(0, i + 1);
       const formatted = current.replace(
         new RegExp(`(${highlight})$`),
-        '<span class="gradient-span">$1</span>'
+        '<span class="gradient-text-hero">$1</span>'
       );
       element.innerHTML = formatted;
       i++;
