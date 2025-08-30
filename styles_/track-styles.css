@@ -302,21 +302,105 @@
       }
 
       /* Estilos para os ícones */
-      .step-illustration {
-        width: 45%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5rem;
-        color: rgba(67, 97, 238, 0.15);
-        transition: all 0.3s ease;
-        z-index: 2;
-      }
+    .step-illustration {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
 
-      .step-illustration:hover {
-        color: var(--primary);
-        transform: scale(1.1);
-      }
+.step-illustration i {
+  display: inline-block;
+  text-shadow: 0 0 15px currentColor;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover extremamente suave */
+.step-illustration:hover {
+  transform: translateY(-2px);
+}
+
+.step-illustration:hover i {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  text-shadow: 0 0 20px currentColor;
+}
+
+/* Cores específicas para cada tecnologia */
+.step-illustration .fa-shield-alt { /* Segurança */
+  color: #56c273;
+}
+
+.step-illustration .fa-html5 { /* HTML */
+  color: #e34f26;
+}
+
+.step-illustration .fa-css3-alt { /* CSS */
+  color: #264de4;
+}
+
+.step-illustration .fa-square-js { /* JavaScript */
+  color: #f7df1e;
+}
+
+.step-illustration .fa-github { /* GitHub */
+  color: #171515;
+}
+
+.step-illustration .fa-react { /* React */
+  color: #61dafb;
+}
+
+.step-illustration .fa-bootstrap { /* Bootstrap */
+  color: #563d7c;
+}
+
+.step-illustration .bi-typescript { /* TypeScript */
+  color: #2f74c0;
+}
+
+.step-illustration .fa-screwdriver-wrench { /* Ferramentas */
+  color: #6c757d;
+}
+
+.step-illustration .fa-vuejs { /* Vue.js */
+  color: #41b883;
+}
+
+.step-illustration .fa-angular { /* Angular */
+  color: #dd0031;
+}
+
+/* Para ícones com múltiplos elementos - efeito individual */
+.step-illustration.multiple-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.step-illustration.multiple-icons i {
+  font-size: 3.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-illustration.multiple-icons:hover i {
+  transform: translateY(-2px);
+}
+
+.step-illustration.multiple-icons:hover i:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.step-illustration.multiple-icons:hover i:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.step-illustration.multiple-icons:hover i:nth-child(3) {
+  transition-delay: 0.15s;
+}
 
       .step-header {
         display: flex;
@@ -545,11 +629,19 @@
         }
         
         .step-illustration {
-          order: 1 !important;
-          font-size: 3rem;
-          margin-bottom: 1rem;
-        }
-        
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    order: 1 !important;
+  }
+
+   .step-illustration.multiple-icons i {
+    font-size: 2.5rem;
+  }
+  
+  .step-illustration:hover {
+    transform: translateY(-1px);
+  }
+
         .step {
           order: 2 !important;
         }
