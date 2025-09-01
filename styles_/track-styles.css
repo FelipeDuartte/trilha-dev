@@ -153,7 +153,6 @@
         pointer-events: none;
       }
 
-      /* Container para cada passo + ícone */
       .step-container {
         display: flex;
         justify-content: space-between;
@@ -162,7 +161,6 @@
         position: relative;
       }
 
-      /* Estilos para os passos */
       .step {
         position: relative;
         width: 45%;
@@ -301,7 +299,7 @@
         order: 1;
       }
 
-      /* Estilos para os ícones */
+  /* Estilos para os ícones */
     .step-illustration {
   width: 45%;
   display: flex;
@@ -320,7 +318,6 @@
   transition: all 0.3s ease;
 }
 
-/* Efeito hover extremamente suave */
 .step-illustration:hover {
   transform: translateY(-2px);
 }
@@ -331,51 +328,51 @@
 }
 
 /* Cores específicas para cada tecnologia */
-.step-illustration .fa-shield-alt, .fa-link { /* Segurança */
+.step-illustration .fa-shield-alt, .fa-link { 
   color: gray;
 }
 
-.step-illustration .fa-html5, .bi-filetype-java { /* HTML */
+.step-illustration .fa-html5, .bi-filetype-java {
   color: #e34f26;
 }
 
-.step-illustration .fa-css3-alt { /* CSS */
+.step-illustration .fa-css3-alt {
   color: #264de4;
 }
 
-.step-illustration .fa-square-js, .bi-filetype-js{ /* JavaScript */
+.step-illustration .fa-square-js, .bi-filetype-js{
   color: #f7df1e;
 }
 
-.step-illustration .fa-github { /* GitHub */
+.step-illustration .fa-github {
   color: #171515;
 }
 
-.step-illustration .fa-react, .fa-server { /* React */
+.step-illustration .fa-react, .fa-server {
   color: #61dafb;
 }
 
-.step-illustration .fa-bootstrap { /* Bootstrap */
+.step-illustration .fa-bootstrap {
   color: #563d7c;
 }
 
-.step-illustration .bi-typescript { /* TypeScript */
+.step-illustration .bi-typescript {
   color: #2f74c0;
 }
 
-.step-illustration .fa-screwdriver-wrench, .fa-tools { /* Ferramentas */
+.step-illustration .fa-screwdriver-wrench, .fa-tools {
   color: #6c757d;
 }
 
-.step-illustration .fa-vuejs, .bi-window { /* Vue.js */
+.step-illustration .fa-vuejs, .bi-window {
   color: #41b883;
 }
 
-.step-illustration .fa-angular { /* Angular */
+.step-illustration .fa-angular {
   color: #dd0031;
 }
 
-/* Para ícones com múltiplos elementos - efeito individual */
+/* Para ícones com múltiplos elementos */
 .step-illustration.multiple-icons {
   display: flex;
   gap: 20px;
