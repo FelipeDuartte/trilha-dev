@@ -57,12 +57,12 @@
 
       /* Botão principal */
       .btn {
-        background: linear-gradient(90deg, #0d1a2f, #112244);
-        padding: 1.5rem 6rem;
+        background-color: transparent;
+        padding: 1.4rem;
         color: #b8d1ff;
         border-radius: 50px;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 600;
         transition: all 0.3s ease;
         border: 1px solid rgba(184, 209, 255, 0.15);
@@ -82,7 +82,7 @@
 
       .btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
       }
 
       /* Cabeçalho */
@@ -331,11 +331,11 @@
 }
 
 /* Cores específicas para cada tecnologia */
-.step-illustration .fa-shield-alt { /* Segurança */
-  color: #56c273;
+.step-illustration .fa-shield-alt, .fa-link { /* Segurança */
+  color: gray;
 }
 
-.step-illustration .fa-html5 { /* HTML */
+.step-illustration .fa-html5, .bi-filetype-java { /* HTML */
   color: #e34f26;
 }
 
@@ -343,7 +343,7 @@
   color: #264de4;
 }
 
-.step-illustration .fa-square-js { /* JavaScript */
+.step-illustration .fa-square-js, .bi-filetype-js{ /* JavaScript */
   color: #f7df1e;
 }
 
@@ -351,7 +351,7 @@
   color: #171515;
 }
 
-.step-illustration .fa-react { /* React */
+.step-illustration .fa-react, .fa-server { /* React */
   color: #61dafb;
 }
 
@@ -363,11 +363,11 @@
   color: #2f74c0;
 }
 
-.step-illustration .fa-screwdriver-wrench { /* Ferramentas */
+.step-illustration .fa-screwdriver-wrench, .fa-tools { /* Ferramentas */
   color: #6c757d;
 }
 
-.step-illustration .fa-vuejs { /* Vue.js */
+.step-illustration .fa-vuejs, .bi-window { /* Vue.js */
   color: #41b883;
 }
 
