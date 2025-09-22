@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links locais -->
+    <link rel="stylesheet" href="styles_/track-styles.css" />
+    <script src="script_/script.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="imagem/icone_full.png"
+      type="image/x-icon"
+    />
+    <!-- CSS CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Título da Página -->
+    <title>Front-End Passo a Passo</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- cabeçalho -->
+      <header>
+        <a href="index.html"
+          ><button class="btn">
+            <i class="fa-solid fa-house"></i>
+          </button></a
+        >
+
+        <h1>Jornada Front-End Completo</h1>
+        <p class="subtitle">
+          Domine o desenvolvimento web front-end seguindo este guia passo a
+          passo, do básico ao avançado
+        </p>
+      </header>
+
+      <div class="learning-path">
+        <!-- Passo 1 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <h2 class="step-title">Segurança</h2>
+            </div>
+            <p class="step-subtitle">Passo 1: Segurança</p>
+            <p class="step-content">
+              A segurança da Web refere-se às medidas de proteção tomadas pelos
+              desenvolvedores para proteger os aplicativos da Web de ameaças que
+              podem afetar os negócios.
+            </p>
+            <ul class="step-topics">
+              <li>CORS</li>
+              <li>OWASP</li>
+              <li>Cookies</li>
+              <li>Criptografia</li>
+              <li>Autenticação e autorização</li>
+              <li>prevenção de ataques</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>CORS</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=Fha6Il-5RYE"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Dias de DEV - O que é CORS
+                    - Resolvendo o erro No 'Access-Control-Allow-Origin' header
+                    is present</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>OWASP</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=wC_epzVm780"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Cassio Batista Pereira -
+                    Série OWASP Top 10 | 1/10 Injection | Código Seguro #017</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Cookies</h4>
+                  <a
+                    href="https://dias.dev/2022-09-27-cookies-e-seguranca/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Cookies</a
+                  >
+                  <h4>Criptografia</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=soTJbV8MxGU"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Dias de DEV - Algoritmos
+                    de Hash - Qual a diferença entre Hash e Encriptação</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=4MCO-FgukcA"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Dias de DEV -
+                    Criptografia: Encriptação e decriptação na prática - Entenda
+                    sobre cifragem</a
+                  >
+                  <h4>Prevenção de ataques</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=MEfgCLE3Dw8"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Dias de DEV - Ataque com
+                    Regex - Negação de serviço com expressões regulares</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=lntsVxPZibw"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Dias de DEV - Segurança da
+                    Informação: Evitando Cross-site scripting (XSS)</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+        </div>
+        <!-- Passo 2 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h2 class="step-title">HTML5 Fundamentos</h2>
+            </div>
+            <p class="step-subtitle">Passo 2: Estrutura da Web</p>
+            <p class="step-content">
+              Aprenda a criar a estrutura básica de páginas web com HTML
+              semântico.
+            </p>
+            <ul class="step-topics">
+              <li>Elementos semânticos (header, section, article, etc.)</li>
+              <li>Formulários e validação</li>
+              <li>Acessibilidade básica (ARIA)</li>
+              <li>SEO básico com HTML</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Grátis</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Curso em Vídeo - HTML5</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Marco Bruno - HTML e
+                    Semântica</a
+                  >
+                  <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> MDN Web Docs
+                    (Documentação)</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Pagos</h4>
+                  <a
+                    href="https://www.udemy.com/course/html-essencial/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Udemy - HTML Essencial</a
+                  >
+                  <a
+                    href="https://www.alura.com.br/formacao-html-e-css"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Alura - Formação HTML e
+                    CSS</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fab fa-html5"></i>
+          </div>
+        </div>
+        <!-- Passo 3 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <h2 class="step-title">CSS Moderno</h2>
+            </div>
+            <p class="step-subtitle">Passo 3: Estilização e Design</p>
+            <p class="step-content">
+              Domine a estilização de páginas web avec CSS3 e técnicas modernas.
+            </p>
+            <ul class="step-topics">
+              <li>Flexbox e Grid Layout</li>
+              <li>Animações e Transições</li>
+              <li>Variáveis CSS</li>
+              <li>Design Responsivo</li>
+              <li>Pré-processadores (SASS)</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Grátis</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Curso em Vídeo - CSS3</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Marco Bruno - Pare de
+                    chutar o CSS</a
+                  >
+                  <a
+                    href="https://css-tricks.com/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> CSS Tricks (Artigos)</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Pagos</h4>
+                  <a
+                    href="https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Udemy - CSS Completo</a
+                  >
+                  <a
+                    href="https://www.alura.com.br/formacao-html-e-css"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Alura - Formação HTML e
+                    CSS</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+        </div>
+        <!-- Passo 4 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+              <h2 class="step-title">JavaScript Essencial</h2>
+            </div>
+            <p class="step-subtitle">Passo 4: Interatividade</p>
+            <p class="step-content">
+              Adicione comportamento dinâmico às suas páginas com JavaScript.
+            </p>
+            <ul class="step-topics">
+              <li>Manipulação do DOM</li>
+              <li>Eventos</li>
+              <li>Var, Let, Const</li>
+              <li>Array</li>
+              <li>Function</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Grátis</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Curso em Vídeo -
+                    JavaScript</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=vEwPnjqWQ-g&list=PL2Fdisxwzt_d590u3uad46W-kHA0PTjjw"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Programação Web - JS
+                    completo</a
+                  >
+                  <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> MDN JavaScript
+                    (Documentação)</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Pagos</h4>
+                  <a
+                    href="https://www.udemy.com/course/javascript-completo-2018-do-iniciante-ao-mestre/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Udemy - JavaScript
+                    Completo</a
+                  >
+                  <a
+                    href="https://www.alura.com.br/formacao-javascript"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Alura - Formação
+                    JavaScript</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fa-brands fa-square-js"></i>
+          </div>
+        </div>
+        <!-- Passo 5 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <h2 class="step-title">Controle de Versão</h2>
+            </div>
+            <p class="step-subtitle">Passo 5: Trabalho em Equipe</p>
+            <p class="step-content">
+              Aprenda a usar Git para versionamento e colaboração em projetos.
+            </p>
+            <ul class="step-topics">
+              <li>Comandos básicos do Git</li>
+              <li>GitHub/GitLab</li>
+              <li>Branches e Merges</li>
+              <li>Pull Requests</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Grátis</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Curso em Vídeo - Git e
+                    GitHub</a
+                  >
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLlAbYrWSYTiPA2iEiQ2PF_A9j__C4hi0A"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Willian Justen - Git e
+                    GitHub</a
+                  >
+                  <a
+                    href="https://git-scm.com/doc"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Oficial
+                    Git</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Pagos</h4>
+                  <a
+                    href="https://www.udemy.com/course/git-e-github-para-iniciantes/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Udemy - Git e GitHub</a
+                  >
+                  <a
+                    href="https://www.alura.com.br/formacao-git-github"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Alura - Formação Git e
+                    GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+        <!-- Passo 6 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h2 class="step-title">Frameworks Front-end</h2>
+            </div>
+            <p class="step-subtitle">Passo 6: Frameworks Front-end</p>
+            <p class="step-content">
+              Domine frameworks JavaScript para construir aplicações complexas.
+            </p>
+            <ul class="step-topics">
+              <li>React.js (Componentes, Hooks)</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>React</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=hd2B7XQAFls"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Programação Web - Curso de
+                    React Para Iniciantes</a
+                  >
+                  <a
+                    href="https://pt-br.reactjs.org/docs/getting-started.html"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação React</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Vue.js</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLcoYAcR89n-qTYqfWTGxXMnAvCqY3JF8w"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Vue.js Básico</a
+                  >
+                  <a
+                    href="https://vuejs.org/guide/introduction.html"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Vue.js</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Angular</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Loiane Groner - Angular</a
+                  >
+                  <a
+                    href="https://angular.io/docs"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Angular</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration multiple-icons">
+            <i class="fa-brands fa-vuejs"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-angular"></i>
+          </div>
+        </div>
+        <!-- Passo 7 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <h2 class="step-title">Frameworks CSS</h2>
+            </div>
+            <p class="step-subtitle">Passo 7: Frameworks CSS</p>
+            <p class="step-content">
+              Domine frameworks CSS para construir sites com facilidade.
+            </p>
+            <ul class="step-topics">
+              <li>Bootstrap</li>
+              <li>Bulma</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Bootstrap</h4>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLnDvRpP8Bnexu5wvxogy6N49_S5Xk8Cze"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Matheus Battisti -
+                    Bootstrap</a
+                  >
+                  <a
+                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Bootstrap</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Bulma</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=Yxkti4L6-Wk"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Escola de JavaScript -
+                    Bulma</a
+                  >
+                  <a
+                    href="https://bulma.io/documentation/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Bulma</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Tailwind CSS</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=1eLaBow7Zbo&list=PLcoYAcR89n-r1m-tMfV4qndrRWpT_rb9u"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Tiago Matos - Tailwind</a
+                  >
+                  <a
+                    href="https://tailwindcss.com/docs/installation"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Documentação Tailwind</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+        </div>
+        <!-- Passo 8 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="bi bi-typescript"></i>
+              </div>
+              <h2 class="step-title">TypeScript</h2>
+            </div>
+            <p class="step-subtitle">
+              Passo 8: TypeScript, o editor te ajuda a programar com mais
+              segurança.
+            </p>
+            <p class="step-content">
+              TypeScript adiciona tipos ao JavaScript para evitar erros antes de
+              rodar o código.
+            </p>
+            <ul class="step-topics">
+              <li>Fundamentos do TypeScript</li>
+              <li>Tipos Primitivos e Inferência</li>
+              <li>Boas práticas</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Gratis</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=kg2-SMolAV0"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> TypeScript - O que é e
+                    quais os seus benefícios? | Diego Fernandes</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=lCemyQeSCV8"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> CURSO DE TYPESCRIPT NA
+                    PRÁTICA - APRENDA TYPESCRIPT EM 1 HORA</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=fx7JqqCw1qg"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Construindo um app
+                    fullstack com o melhor do TypeScript</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Pagos</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=1eLaBow7Zbo&list=PLcoYAcR89n-r1m-tMfV4qndrRWpT_rb9u"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> xxx</a
+                  >
+                  <a
+                    href="https://tailwindcss.com/docs/installation"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> xxx</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="bi bi-typescript"></i>
+          </div>
+        </div>
+        <!-- Passo 9 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h2 class="step-title">Ferramentas e Otimização</h2>
+            </div>
+            <p class="step-subtitle">Passo 9: Ferramentas e Otimização</p>
+            <p class="step-content">
+              Aprenda as ferramentas essenciais para desenvolvimento
+              profissional.
+            </p>
+            <ul class="step-topics">
+              <li>npm/yarn</li>
+              <li>Testes (Jest, Testing Library, Cypress)</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Gerenciadores de Pacote</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=tFqsmNrWW0M"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Fellyph Cintra - NPM - O
+                    gerenciador de pacotes do Node.js</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=3BPfDo4arHc"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> DevPleno - Yarn - Uma
+                    alternativa gerenciador de pacotes NPM</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Testes</h4>
+                  <a
+                    href="https://www.devmedia.com.br/teste-unitario-com-jest/41234"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Testes com Jest</a
+                  >
+                  <a
+                    href="https://testing-library.com/docs/react-testing-library/intro/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Testing Library</a
+                  >
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLnUo-Rbc3jjyx5BVnG8MB7vNd5ecu2yP1"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Cypress - Cypress do zero
+                    ao reporte</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+        </div>
+        <!-- Passo 10 -->
+        <div class="step-container">
+          <div class="step">
+            <div class="timeline-marker"></div>
+            <div class="step-header">
+              <div class="step-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h2 class="step-title">Ferramentas de Build</h2>
+            </div>
+            <p class="step-subtitle">Passo 10: Ferramentas de Build</p>
+            <p class="step-content">
+              Ferramentas de build preparam seu código para o mundo real.
+            </p>
+            <ul class="step-topics">
+              <li>Task Runners</li>
+              <li>Module Bundlers</li>
+              <li>Formatadores e Linters</li>
+            </ul>
+            <div class="step-resources">
+              <p class="resources-title toggle-resources">
+                Cursos para Aprendizado<i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="resources-links">
+                <div class="resource-category">
+                  <h4>Task Runners</h4>
+                  <a
+                    href="https://docs.npmjs.com/cli/v6/using-npm/scripts"
+                    target="_blank"
+                    class="resource-link"
+                    >Task Runners</a
+                  >
+                  <h4>Module Bundlers</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=sU3W2ZTt-8I"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Webpack - Curso rápido
+                    para iniciantes</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=u0euWX6CeIg"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Webpack - Aprenda de uma
+                    vez por todas</a
+                  >
+                  <a
+                    href="https://blog.logrocket.com/getting-started-esbuild/"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> LogRocket - esbuild</a
+                  >
+                  <a
+                    href="https://dev.to/lixeletto/vite-js-o-build-tool-que-vai-facilitar-a-sua-vida-15ho"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Vite.js</a
+                  >
+                  <a
+                    href="https://eduardo-diogo.medium.com/vite-js-killer-na-cria%C3%A7%C3%A3o-de-frontend-9b083f8a77e6"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> ViteJS, O Killer na
+                    criação de frontend.</a
+                  >
+                </div>
+                <div class="resource-category">
+                  <h4>Formatadores e Linters</h4>
+                  <a
+                    href="https://www.youtube.com/watch?v=uem6ChxImEQ"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Como instalar o
+                    Prettier</a
+                  >
+                  <a
+                    href="https://www.youtube.com/watch?v=i26sZrPj2zY"
+                    target="_blank"
+                    class="resource-link"
+                    ><i class="fa-solid fa-link"></i> Eslint para iniciantes</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-illustration">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+        </div>
+
+        <!-- button back to top -->
+        <button class="back-to-top" aria-label="Voltar ao topo">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          JornadaDEV &copy; <span id="year"></span> - Todos os direitos
+          reservados
+        </p>
+        <div class="tech-icons">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
