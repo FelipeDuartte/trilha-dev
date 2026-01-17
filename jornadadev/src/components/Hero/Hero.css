@@ -1,0 +1,115 @@
+/* HERO */
+#hero {
+  min-height: 90vh;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards 0.5s;}
+/* ===== VIDEO HERO ===== */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 4px; /* espaçamento para a borda */
+  background: linear-gradient(45deg, #4361ee, #3a0ca3, #7209b7);
+  background-size: 300% 300%;
+  animation: neonBorder 6s linear infinite;
+}
+
+@keyframes neonBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.video-hero {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;}
+
+.p-hero {
+  font-family: "Orbitron", sans-serif;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(90deg, #00f0ff, #7f00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  animation: shine 4s linear infinite;
+}
+
+.btnExplorarTrilha {
+  letter-spacing: 0.05em;
+  position: relative;
+  border: none;
+  display: inline-flex;
+  gap: 0.5rem;
+  background-color: transparent;
+  animation: pulse 2s infinite;
+  position: relative;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.btnExplorarTrilha:hover {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(-3px);
+  background: linear-gradient(to right, #673ab7, #3a50b7);
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.6);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(67, 97, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+#typing-title::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* /HERO */

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap");
+/* CONFIG GERAL */
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #f72585;
+  --dark: #0a0a19;
+  --darker: #141432;
+  --light: #f8f9fa;
+  --gray: #e2e8f0;
+  --tech-gradient: linear-gradient(135deg, var(--primary), var(--accent));
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  color: var(--light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-family: "Roboto", sans-serif;
+}
+
+.section-title {
+  background: linear-gradient(120deg, #4a148c, #1565c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px rgba(67, 97, 238, 0.4);
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.h5 {
+  font-weight: 600;
+  letter-spacing: 0.05px;
+  background: linear-gradient(120deg, #00f0ff, #7f00ff, #00f0ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(127, 0, 255, 0.3);
+  font-family: "Orbitron", sans-serif;
+}
+
+.p-trilhas,
+.p-about {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+/* /CONFIG GERAL */
+
+/* HEADER */
+/* NAVEGAÇÃO HEADER */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--light);
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-icon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .link-icon {
+  transform: translateY(-3px);
+  text-shadow: var(--text-glow);
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(67, 97, 238, 0.2),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-light);
+}
+/* /NAVEGAÇÃO HEADER */
+h1.JornadaDEV {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05px;
+  background: linear-gradient(120deg, #00f0ff, #7f00ff, #00f0ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(127, 0, 255, 0.3);
+  font-family: "Orbitron", sans-serif;
+}
+
+p.p-header {
+  font-size: small;
+  font-style: italic;
+  font-family: "Orbitron", sans-serif;
+}
+/* /HEADER */

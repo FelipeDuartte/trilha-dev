@@ -1,0 +1,133 @@
+/* ABOUT */
+.card-icon {
+  width: 50px;
+  height: 50px;
+}
+/* ABOUT JORNADADEV */
+.developer-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(20, 28, 58, 0.6);
+  border: 1px solid rgba(67, 97, 238, 0.3);
+}
+
+.about-card {
+  background: rgba(10, 10, 25, 0.5);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 240, 255, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2) !important;
+}
+
+.call-to-action {
+  background: rgba(67, 97, 238, 0.1);
+  border: 1px solid var(--primary);
+}
+
+.btn-tech-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border: 2px solid #4361ee;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  background: rgba(13, 26, 47, 0.7);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.2);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.btn-tech-github::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d1a2f 0%, #1a3a8f 50%, #4361ee 100%);
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.btn-tech-github:hover::before {
+  width: 100%;
+}
+
+.btn-tech-github:hover {
+  color: #ffffff;
+  border-color: rgba(0, 238, 255, 0.37);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.089),
+    0 0 40px rgba(67, 98, 238, 0.171);
+  transform: translateY(-2px);
+}
+
+.btn-tech-github::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 75% 30%,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-tech-github .tech-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at 25% 35%,
+      rgba(0, 240, 255, 0.1) 0%,
+      transparent 3%
+    ),
+    radial-gradient(
+      circle at 75% 65%,
+      rgba(67, 97, 238, 0.1) 0%,
+      transparent 3%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-mail-simple {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1a2c47;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-mail-simple:hover {
+  background-color: #223a5f;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+}
+
