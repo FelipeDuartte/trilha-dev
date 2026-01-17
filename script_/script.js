@@ -35,3 +35,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Controle de abertura e fechamento do formulário
+document.addEventListener('DOMContentLoaded', function() {
+  const openBtn = document.getElementById('open-form-btn');
+  const closeBtn = document.getElementById('close-form-btn');
+  const formWrapper = document.getElementById('contact-form-wrapper');
+
+  // Abrir formulário
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    formWrapper.style.display = 'block';
+    
+    // Scroll suave até o formulário
+    setTimeout(() => {
+      formWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  });
+
+  // Fechar formulário
+  closeBtn.addEventListener('click', function() {
+    formWrapper.style.display = 'none';
+  });
+
+  // Fechar ao clicar fora (opcional)
+  formWrapper.addEventListener('click', function(e) {
+    if (e.target === formWrapper) {
+      formWrapper.style.display = 'none';
+    }
+  });
+});
