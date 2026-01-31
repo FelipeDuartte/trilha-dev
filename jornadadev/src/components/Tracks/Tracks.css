@@ -1,148 +1,470 @@
-/* TRILHAS */
-.track-icon {
-  width: 80px;
-  height: 80px;
+/* ============================================
+   BACKGROUND EFFECTS
+   ============================================ */
+
+.tracks-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(67, 97, 238, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 97, 238, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  animation: gridFlow 20s linear infinite;
 }
 
+@keyframes gridFlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.tracks-gradient-orb-1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(67, 97, 238, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: orbFloat1 10s ease-in-out infinite;
+}
+
+.tracks-gradient-orb-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 239, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  animation: orbFloat2 12s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 30px); }
+}
+
+/* ============================================
+   SECTION BADGE
+   ============================================ */
+
+.tracks-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.15) 0%, rgba(0, 239, 255, 0.1) 100%);
+  border: 1px solid rgba(67, 97, 238, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.2);
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.badge-pulse {
+  width: 8px;
+  height: 8px;
+  background: #4361ee;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.badge-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: #4361ee;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulsering 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes pulsering {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.badge-text-tracks {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #4361ee 0%, #00efff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+
+.gradient-text-tracks {
+  background: linear-gradient(135deg, #ffffff 0%, #4361ee 50%, #00efff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShimmer 5s ease infinite;
+}
+
+@keyframes gradientShimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* ============================================
+   TRACK CARDS - Clean & Modern
+   ============================================ */
+
 .track-card {
+  background: rgba(15, 20, 35, 0.6);
+  border: 1px solid rgba(67, 97, 238, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease-in-out;
-  background: rgba(255, 255, 255, 0.05);
+  animation: cardReveal 0.6s ease forwards;
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.track-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.track-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.track-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Card Glow Effect */
+.track-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(67, 97, 238, 0.1) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Border Effect */
+.track-border-effect {
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, #4361ee, #00efff);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
 }
 
 .track-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #00e1ff;
-  box-shadow:
-    0 0 20px rgba(0, 225, 255, 0.3),
-    0 0 40px rgba(0, 225, 255, 0.2);
+  transform: translateY(-6px);
+  border-color: rgba(67, 97, 238, 0.4);
+  box-shadow: 
+    0 12px 35px rgba(67, 97, 238, 0.2),
+    0 5px 15px rgba(0, 239, 255, 0.1);
 }
 
-.track-card.visible {
+.track-card:hover .track-card-glow {
   opacity: 1;
-  transform: translateY(0);
 }
 
-.track-card h3 {
-  color: #ffffff;
+.track-card:hover .track-border-effect {
+  opacity: 0.3;
+}
+
+/* Featured Card */
+.track-card-featured {
+  border-color: rgba(67, 97, 238, 0.3);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
   font-weight: 700;
-  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+/* ============================================
+   TRACK ICON
+   ============================================ */
+
+.track-icon-wrapper {
   position: relative;
+  width: fit-content;
+}
+
+.track-icon {
+  width: 85px;
+  height: 85px;
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.25);
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%) !important;
+}
+
+.track-icon-glow {
+  position: absolute;
+  inset: -6px;
+  background: linear-gradient(135deg, #4361ee, #00efff);
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 0.4s ease;
   z-index: 1;
 }
 
-.track-card:hover h3 {
-  color: #00e1ff; /* Azul neon/tech */
-  text-shadow:
-    0 0 10px rgba(0, 225, 255, 0.7),
-    0 0 20px rgba(0, 225, 255, 0.5);
-  transform: scale(1.05);
+.track-card:hover .track-icon {
+  transform: scale(1.08);
+  box-shadow: 
+    0 12px 30px rgba(67, 97, 238, 0.35),
+    0 0 20px rgba(0, 239, 255, 0.2);
 }
 
-.track-card h3::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #00e1ff, #7f00ff);
-  transition: width 0.4s ease;
-  margin: 6px auto 0;
-  border-radius: 3px;
+.track-card:hover .track-icon-glow {
+  opacity: 0.5;
 }
 
-.track-card:hover h3::after {
-  width: 60%;
-}
+/* ============================================
+   TRACK TITLE
+   ============================================ */
 
-.btn-trilhas {
-  background: linear-gradient(90deg, #0d1a2f, #112244);
-  width: 160px;
-  color: #b8d1ff;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
+.track-title {
+  color: #ffffff;
+  font-size: 1.75rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(184, 209, 255, 0.15);
-  cursor: pointer;
-  box-shadow:
-    0 0 8px rgba(50, 100, 200, 0.15),
-    inset 0 0 5px rgba(0, 119, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-  will-change: transform, box-shadow, text-shadow;
-  text-shadow: 0 0 4px rgba(120, 180, 255, 0.3);
 }
 
-.btn-trilhas::before {
-  content: "";
+.track-card:hover .track-title {
+  color: #00efff;
+}
+
+/* ============================================
+   TRACK DESCRIPTION
+   ============================================ */
+
+.p-trilhas {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.track-card:hover .p-trilhas {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   TRACK BUTTON - Modern
+   ============================================ */
+
+.btn-track-modern {
+  position: relative;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.2) 0%, rgba(13, 26, 47, 0.8) 100%);
+  border: 2px solid rgba(67, 97, 238, 0.4);
+  border-radius: 50px;
+  padding: 12px 32px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.25);
+}
+
+.btn-track-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-track-shine {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 119, 255, 0.12),
-    transparent
-  );
-  transition: 0.6s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
 }
 
-.btn-trilhas:hover::before {
-  left: 100%;
-}
-
-.btn-trilhas::after {
+.btn-track-modern::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 119, 255, 0.08) 0%,
-    transparent 70%
-  );
-  transform: rotate(30deg);
-  transition: all 0.7s ease;
+  inset: 0;
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50px;
 }
 
-.btn-trilhas:hover::after {
+.btn-track-modern:hover::before {
+  opacity: 1;
+}
+
+.btn-track-modern:hover {
+  transform: translateY(-3px);
+  border-color: #00efff;
+  box-shadow: 
+    0 10px 35px rgba(67, 97, 238, 0.4),
+    0 0 25px rgba(0, 239, 255, 0.3);
+  color: #ffffff;
+}
+
+.btn-track-modern:hover .btn-track-shine {
   left: 100%;
 }
 
-.btn-trilhas:hover {
-  background-color: #091323;
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 16px rgba(0, 119, 255, 0.4),
-    inset 0 0 10px rgba(120, 180, 255, 0.2);
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(184, 209, 255, 0.6);
-  border-color: rgba(120, 180, 255, 0.4);
+.btn-track-modern:hover i {
+  transform: translateX(4px);
 }
 
-.btn-trilhas .tech-dots {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background:
-    radial-gradient(
-      circle at 25% 35%,
-      rgba(184, 209, 255, 0.2) 0%,
-      transparent 3%
-    ),
-    radial-gradient(
-      circle at 75% 65%,
-      rgba(184, 209, 255, 0.2) 0%,
-      transparent 3%
-    );
-  pointer-events: none;
+.btn-track-modern i {
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
 }
-/* /TRILHAS */
+
+/* ============================================
+   ACCENT LINE
+   ============================================ */
+
+.track-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4361ee, transparent);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.track-card:hover .track-accent-line {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+  .tracks-gradient-orb-1,
+  .tracks-gradient-orb-2 {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .track-title {
+    font-size: 1.6rem;
+  }
+  
+  .p-trilhas {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .track-icon {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .track-icon i {
+    font-size: 2rem !important;
+  }
+  
+  .tracks-badge {
+    font-size: 0.75rem;
+    padding: 8px 20px;
+  }
+  
+  .btn-track-modern {
+    padding: 10px 28px;
+    font-size: 0.95rem;
+  }
+  
+  .featured-badge {
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+  
+  .track-title {
+    font-size: 1.5rem;
+  }
+  
+  .p-trilhas {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .tracks-gradient-orb-1,
+  .tracks-gradient-orb-2,
+  .tracks-grid-bg {
+    animation: none;
+  }
+}

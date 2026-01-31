@@ -1,83 +1,12 @@
-/* HERO */
+/* ============================================
+   HERO SECTION - Melhorias Sutis
+   ============================================ */
+
 #hero {
   min-height: 90vh;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards 0.5s;}
-/* ===== VIDEO HERO ===== */
-.video-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  padding: 4px; /* espaçamento para a borda */
-  background: linear-gradient(45deg, #4361ee, #3a0ca3, #7209b7);
-  background-size: 300% 300%;
-  animation: neonBorder 6s linear infinite;
-}
-
-@keyframes neonBorder {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.video-hero {
-  display: block;
-  width: 100%;
-  height: 500px;
-  border-radius: 16px;
-  object-fit: cover;
-}
-video::-webkit-media-controls-fullscreen-button {
-  display: none !important;}
-
-.p-hero {
-  font-family: "Orbitron", sans-serif;
-}
-
-.gradient-text-hero {
-  background: linear-gradient(90deg, #00f0ff, #7f00ff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: 600;
-  animation: shine 4s linear infinite;
-}
-
-.btnExplorarTrilha {
-  letter-spacing: 0.05em;
-  position: relative;
-  border: none;
-  display: inline-flex;
-  gap: 0.5rem;
-  background-color: transparent;
-  animation: pulse 2s infinite;
-  position: relative;
-}
-
-.btn-lg {
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-}
-
-.btnExplorarTrilha:hover {
-  transition: all 0.6s ease-in-out;
-  transform: translateY(-3px);
-  background: linear-gradient(to right, #673ab7, #3a50b7);
-  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.6);
-  color: white;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(67, 97, 238, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0);
-  }
+  animation: fadeInUp 1s ease-out forwards 0.5s;
 }
 
 @keyframes fadeInUp {
@@ -87,29 +16,196 @@ video::-webkit-media-controls-fullscreen-button {
   }
 }
 
-@keyframes shine {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+/* ============================================
+   BACKGROUND EFFECTS - Sutis
+   ============================================ */
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(67, 97, 238, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 97, 238, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-gradient-orb {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(67, 97, 238, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+.p-hero {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, #4361ee 0%, #00efff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShine 4s linear infinite;
+  font-weight: 700;
+}
+
+@keyframes gradientShine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 #typing-title::after {
   content: "|";
   animation: blink 0.7s infinite;
   font-weight: bold;
-  color: #0d6efd;
+  color: #4361ee;
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   BUTTON - Melhorado
+   ============================================ */
+
+.btnExplorarTrilha {
+  letter-spacing: 0.5px;
+  position: relative;
+  border: 2px solid rgba(67, 97, 238, 0.3);
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.15) 0%, rgba(90, 122, 255, 0.1) 100%);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnExplorarTrilha::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btnExplorarTrilha:hover::before {
+  left: 100%;
+}
+
+.btnExplorarTrilha:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  box-shadow: 
+    0 10px 30px rgba(67, 97, 238, 0.4),
+    0 0 20px rgba(67, 97, 238, 0.2);
+  color: white;
+  border-color: rgba(67, 97, 238, 0.5);
+}
+
+.btnExplorarTrilha i {
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btnExplorarTrilha:hover i {
+  transform: translateX(5px);
+}
+
+/* ============================================
+   VIDEO SECTION - Melhorado
+   ============================================ */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 3px;
+  background: linear-gradient(135deg, #4361ee, #00efff, #4361ee);
+  background-size: 200% 200%;
+  animation: borderFlow 6s ease infinite;
+  box-shadow: 0 10px 35px rgba(67, 97, 238, 0.25);
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.video-hero {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border-radius: 17px;
+  object-fit: cover;
+  background: #0a0a19;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+  .p-hero {
+    font-size: 1.05rem;
   }
 }
-/* /HERO */
+
+@media (max-width: 768px) {
+  #hero {
+    min-height: auto;
+  }
+  
+  .hero-gradient-orb {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .video-hero {
+    height: 350px;
+  }
+  
+  .btnExplorarTrilha {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

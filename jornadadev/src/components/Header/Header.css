@@ -103,7 +103,7 @@ h3 {
 }
 
 .nav-link:hover .link-icon {
-  transform: translateY(-3px);
+  transform: translateY(-3px) ;
   text-shadow: var(--text-glow);
 }
 

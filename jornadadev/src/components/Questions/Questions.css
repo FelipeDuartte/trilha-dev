@@ -1,101 +1,442 @@
-/* Estilos para manter consistência com o resto do site */
-.bg-dark-blue-transparent {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
+/* ============================================
+   BACKGROUND EFFECTS
+   ============================================ */
 
-.bg-dark-blue-transparent:hover {
-  background: rgba(30, 41, 59, 0.7);
-  transform: translateY(-5px);
-}
-
-.icon-wrapper-tech {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: white;
-}
-
-.card-tech-overlay {
+.questions-grid-bg {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(67, 97, 238, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 97, 238, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  opacity: 0.6;
 }
 
-.gradient-span {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.questions-gradient-orb {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(67, 97, 238, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 30px); }
+}
+
+/* ============================================
+   SECTION BADGE
+   ============================================ */
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(0, 239, 255, 0.05) 100%);
+  border: 1px solid rgba(67, 97, 238, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: #4361ee;
+  border-radius: 50%;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.badge-text {
+  background: linear-gradient(135deg, #4361ee 0%, #00efff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.contact-link {
-  color: #a5b4fc;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  display: inline-block;
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+
+.gradient-text-questions {
+  background: linear-gradient(135deg, #ffffff 0%, #4361ee 50%, #00efff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 4s ease infinite;
 }
 
-.contact-link:hover {
-  color: #667eea;
-  transform: translateX(5px);
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
 }
 
-.form-control-dark {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(102, 126, 234, 0.3);
-  color: #e2e8f0;
-  padding: 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+/* ============================================
+   DESCRIPTION TEXT
+   ============================================ */
+
+.p-trilhas {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.form-control-dark:focus {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: #667eea;
-  color: #e2e8f0;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-  outline: none;
+.text-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
 }
 
-.form-control-dark::placeholder {
-  color: #64748b;
-}
+/* ============================================
+   CONTACT CARDS
+   ============================================ */
 
-.form-label {
-  color: #cbd5e1;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.btn-course-promo {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-block;
+.contact-card {
+  background: linear-gradient(135deg, rgba(20, 28, 58, 0.6) 0%, rgba(10, 15, 35, 0.7) 100%);
+  border: 1px solid rgba(67, 97, 238, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
-.btn-course-promo:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+.card-glow-border {
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, #4361ee, #00efff, #4361ee);
+  background-size: 200% 200%;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(20, 28, 58, 0.95) 0%, rgba(10, 15, 35, 0.95) 100%);
+  border-radius: 15px;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(67, 97, 238, 0.4);
+  box-shadow: 
+    0 10px 30px rgba(67, 97, 238, 0.2),
+    0 5px 15px rgba(0, 239, 255, 0.1);
+}
+
+.contact-card:hover .card-glow-border {
+  opacity: 0.5;
+}
+
+/* Icon Wrapper */
+.icon-wrapper-tech {
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+}
+
+.icon-glow {
+  position: absolute;
+  inset: -5px;
+  background: linear-gradient(135deg, #4361ee, #00efff);
+  border-radius: 14px;
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 0.4s ease;
+}
+
+.contact-card:hover .icon-wrapper-tech {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 
+    0 12px 30px rgba(67, 97, 238, 0.4),
+    0 0 20px rgba(0, 239, 255, 0.3);
+}
+
+.contact-card:hover .icon-glow {
+  opacity: 0.6;
+}
+
+/* Card Tech Overlay */
+.card-tech-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4361ee, #00efff, transparent);
+  opacity: 0.7;
+}
+
+/* ============================================
+   CONTACT LINKS
+   ============================================ */
+
+.contact-link {
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 4px 0;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4361ee, #00efff);
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #00efff;
+  transform: translateX(4px);
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+.contact-link i {
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover i {
+  transform: translateX(3px);
+}
+
+/* ============================================
+   FORM CARD
+   ============================================ */
+
+.form-card {
+  background: linear-gradient(135deg, rgba(20, 28, 58, 0.7) 0%, rgba(10, 15, 35, 0.8) 100%);
+  border: 1px solid rgba(67, 97, 238, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  box-shadow: 
+    0 15px 40px rgba(67, 97, 238, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(67, 97, 238, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Form Icon Badge */
+.form-icon-badge {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   color: white;
 }
+
+/* Close Button */
+.btn-close-custom {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-close-custom:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #ef4444;
+  transform: rotate(90deg);
+}
+
+/* ============================================
+   FORM INPUTS
+   ============================================ */
+
+.form-label {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-label i {
+  color: #4361ee;
+  font-size: 0.85rem;
+}
+
+.form-control-dark {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(67, 97, 238, 0.25);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+}
+
+.form-control-dark:focus {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: #4361ee;
+  color: #ffffff;
+  box-shadow: 
+    0 0 0 3px rgba(67, 97, 238, 0.15),
+    0 4px 12px rgba(67, 97, 238, 0.2);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.form-control-dark::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+select.form-control-dark {
+  cursor: pointer;
+}
+
+select.form-control-dark option {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 10px;
+}
+
+textarea.form-control-dark {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ============================================
+   SEND BUTTON
+   ============================================ */
+
+.btn-send-message {
+  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.btn-shine-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-send-message:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 30px rgba(67, 97, 238, 0.4),
+    0 0 20px rgba(0, 239, 255, 0.2);
+}
+
+.btn-send-message:hover .btn-shine-effect {
+  left: 100%;
+}
+
+.btn-send-message:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSE TIME BADGE
+   ============================================ */
+
+.response-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: rgba(67, 97, 238, 0.1);
+  border: 1px solid rgba(67, 97, 238, 0.2);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+.response-time-badge i {
+  color: #4361ee;
+  font-size: 1rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 
 .fade-up {
   opacity: 0;
@@ -125,44 +466,6 @@
   }
 }
 
-.p-trilhas {
-  color: #94a3b8;
-  font-size: 1.1rem;
-}
-
-.card {
-  cursor: pointer;
-}
-
-select.form-control-dark {
-  cursor: pointer;
-}
-
-select.form-control-dark option {
-  background: #1e293b;
-  color: #e2e8f0;
-}
-
-.btn-close-custom {
-  background: rgba(239, 68, 68, 0.2);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #ef4444;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.btn-close-custom:hover {
-  background: rgba(239, 68, 68, 0.3);
-  transform: rotate(90deg);
-}
-
 #contact-form-wrapper {
   animation: slideDown 0.4s ease forwards;
 }
@@ -175,5 +478,50 @@ select.form-control-dark option {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .questions-gradient-orb {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .icon-wrapper-tech {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  
+  .section-badge {
+    font-size: 0.75rem;
+    padding: 6px 16px;
+  }
+  
+  .btn-send-message {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .questions-gradient-orb {
+    animation: none;
   }
 }

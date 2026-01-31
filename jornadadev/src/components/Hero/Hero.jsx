@@ -35,9 +35,13 @@ function Hero() {
     <>
       <section
         id="hero"
-        className="d-flex align-items-center justify-content-center pt-5"
+        className="d-flex align-items-center justify-content-center pt-5 mb-5 position-relative overflow-hidden"
       >
-        <div className="container pt-5">
+        {/* Background Effects - Sutis */}
+        <div className="hero-grid-bg"></div>
+        <div className="hero-gradient-orb"></div>
+        
+        <div className="container pt-5 position-relative">
           <div className="row align-items-center justify-content-between g-4">
             <div className="col-lg-6 text-lg-start pt-4">
               <h1 ref={typingTitleRef} className="display-4 fw-bold mb-4">
@@ -51,23 +55,28 @@ function Hero() {
                 Aprenda de forma gratuita as tecnologias que estão moldando o
                 futuro
               </p>
-              <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 my-3">
+              
+              <div className="gap-3 my-4">
                 <a
                   href="#tracks"
-                  className="btn btnExplorarTrilha btn-primary btn-lg px-4 py-3 justify-content-center align-items-center fw-bold"
+                  className="btn btnExplorarTrilha btn-primary btn-lg px-4 py-3 d-inline-flex justify-content-center align-items-center fw-bold"
                 >
-                  Explorar Trilhas <i className="fas fa-arrow-right ms-2"></i>
+                  <span>Explorar Trilhas</span>
+                  <i className="bi bi-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
-            <div className="col pb-4">
-              <div className="video-container rounded-4">
-                <video
-                  className="video-hero rounded-4"
-                  src=""
-                  playsinline
-                  controls
-                ></video>
+            
+            <div className="col-lg-6 pb-4">
+              <div className="video-wrapper">
+                <div className="video-container rounded-4">
+                  <video
+                    className="video-hero rounded-4"
+                    src=""
+                    playsinline
+                    controls
+                  ></video>
+                </div>
               </div>
             </div>
           </div>
