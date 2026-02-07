@@ -3,7 +3,6 @@
    ============================================ */
 
 #hero {
-  min-height: 90vh;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-out forwards 0.5s;
@@ -81,14 +80,14 @@
 }
 
 /* ============================================
-   BUTTON - Melhorado
+   BUTTON 
    ============================================ */
 
 .btnExplorarTrilha {
   letter-spacing: 0.5px;
   position: relative;
   border: 2px solid rgba(67, 97, 238, 0.3);
-  background: linear-gradient(135deg, rgba(67, 97, 238, 0.15) 0%, rgba(90, 122, 255, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(67, 98, 238, 0) 0%, rgba(90, 123, 255, 0.13) 100%);
   backdrop-filter: blur(5px);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,9 +110,9 @@
 
 .btnExplorarTrilha:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #4361ee 0%, #5a7aff 100%);
+  background: linear-gradient(135deg, #4362ee15 0%, #5a7bff34 100%);
   box-shadow: 
-    0 10px 30px rgba(67, 97, 238, 0.4),
+    0 5px 20px rgba(67, 97, 238, 0.4),
     0 0 20px rgba(67, 97, 238, 0.2);
   color: white;
   border-color: rgba(67, 97, 238, 0.5);

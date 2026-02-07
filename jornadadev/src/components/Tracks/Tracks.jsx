@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Tracks() {
   return (
     <>
-      <section id="tracks" className="pt-0 pb-5 bg-dark bg-opacity-50 position-relative overflow-hidden">
+      <section id="tracks" className="pt-5 mt-5 pt-0 pb-5 bg-dark bg-opacity-50 position-relative overflow-hidden">
         {/* Background Effects */}
         <div className="tracks-grid-bg"></div>
         <div className="tracks-gradient-orb-1"></div>

@@ -5,9 +5,7 @@ import "../App.css";
 export default function MainLayout() {
   return (
     <>
-      <Header />
       <Outlet />
-      <Footer />
     </>
   );
 }

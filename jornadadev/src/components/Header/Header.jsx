@@ -2,7 +2,7 @@ import "./Header.css";
 function Header() {
   return (
     <>
-      <header className="fixed-top py-3 bg-dark bg-opacity-90 backdrop-blur border-bottom border-primary border-opacity-25">
+      <header className="fixed-top py-2 bg-dark bg-opacity-90 backdrop-blur border-bottom border-primary border-opacity-25">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark p-0">
             <div className="container-fluid p-0">
@@ -47,10 +47,10 @@ function Header() {
                   </li>
                   <li className="nav-item">
                     <a
-                      href="#course-promotion"
+                      href="#contact-support"
                       className="nav-link d-flex align-items-center gap-2"
                     >
-                      <i className="fas fa-toolbox"></i> Divulgação
+                      <i class="bi bi-question-octagon-fill"></i> Duvidas
                     </a>
                   </li>
                   <li className="nav-item">

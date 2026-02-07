@@ -70,7 +70,7 @@ function About() {
                     <h3 className="fs-5 mb-2 fw-bold">Como surgiu</h3>
                     <p className="m-0">
                       Depois de passar por muitas dificuldades para aprender de
-                      forma certa e estruturada, decidi criar este guia para
+                      forma certa, decidi criar este guia para
                       ajudar outros que estão começando.
                     </p>
                   </div>

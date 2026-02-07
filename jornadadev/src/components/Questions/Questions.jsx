@@ -41,7 +41,7 @@ export default function Questions() {
                     Envie sua dúvida por email e receba resposta em até 24 horas
                   </p>
                   <a href="mailto:contato@seusite.com" className="contact-link">
-                    <span>contato@seusite.com</span>
+                    <span>Duarte.dev@outlook.com</span>
                     <i className="bi bi-arrow-right ms-2"></i>
                   </a>
                 </div>
@@ -68,7 +68,7 @@ export default function Questions() {
                     rel="noopener noreferrer"
                     className="contact-link"
                   >
-                    <span>(11) 99999-9999</span>
+                    <span>(31) 99945-0717</span>
                     <i className="bi bi-arrow-right ms-2"></i>
                   </a>
                 </div>

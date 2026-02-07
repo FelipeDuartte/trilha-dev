@@ -56,10 +56,12 @@ function App() {
             path="/"
             element={
               <>
+                <Header />
                 <Hero />
                 <Tracks />
                 <Questions />
                 <About />
+                <Footer />
               </>
             }
           />
