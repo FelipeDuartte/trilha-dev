@@ -14,14 +14,17 @@
   --border-y: 50%;
 }
 
-/* Classes Genéricas para Todas as Tracks */
+/* ============================================
+   Classes Genéricas para Todas as Tracks
+   ============================================ */
+
 .track-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
-/* Cabeçalho - Reduzido */
+/* Cabeçalho */
 .track-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -75,7 +78,10 @@
   line-height: 1.5;
 }
 
-/* Linha do tempo - Compactada */
+/* ============================================
+   Linha do Tempo
+   ============================================ */
+
 .learning-path {
   position: relative;
   padding: 1.5rem 0;
@@ -115,6 +121,10 @@
   z-index: -1;
   pointer-events: none;
 }
+
+/* ============================================
+   Step Container e Cards
+   ============================================ */
 
 .step-container {
   display: flex;
@@ -161,15 +171,9 @@
 }
 
 @keyframes border-flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .step::after {
@@ -186,7 +190,8 @@
 
 .step:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(67, 97, 238, 0.6),
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(67, 97, 238, 0.6),
     0 0 30px rgba(247, 37, 133, 0.4);
 }
 
@@ -211,21 +216,15 @@
 }
 
 @keyframes pulse {
-  0% {
-    opacity: 0.5;
-    transform: scale(0.8);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0.5;
-    transform: scale(0.8);
-  }
+  0%   { opacity: 0.5; transform: scale(0.8); }
+  50%  { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0.5; transform: scale(0.8); }
 }
 
-/* Timeline Marker com Linha Conectora */
+/* ============================================
+   Timeline Marker e Linha Conectora
+   ============================================ */
+
 .timeline-marker {
   position: absolute;
   top: 1.5rem;
@@ -245,12 +244,12 @@
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 25px rgba(67, 97, 238, 0.9), 0 0 35px rgba(247, 37, 133, 0.5);
+    box-shadow: 0 0 25px rgba(67, 97, 238, 0.9),
+      0 0 35px rgba(247, 37, 133, 0.5);
     transform: scale(1.1);
   }
 }
 
-/* Linha conectora horizontal do marker ao card */
 .step-container::after {
   content: "";
   position: absolute;
@@ -265,7 +264,7 @@
   transition: all 0.3s ease;
 }
 
-/* Passos ímpares (à esquerda) - linha vai do centro para o card esquerdo */
+/* Passos ímpares (card à esquerda) */
 .step-container:nth-child(odd)::after {
   left: calc(45% + 1.5rem);
   right: 50%;
@@ -276,7 +275,7 @@
   );
 }
 
-/* Passos pares (à direita) - linha vai do centro para o card direito */
+/* Passos pares (card à direita) */
 .step-container:nth-child(even)::after {
   left: 50%;
   right: calc(45% + 1.5rem);
@@ -287,54 +286,30 @@
   );
 }
 
-/* Efeito hover na linha conectora */
+/* Hover na linha conectora */
 .step-container:hover::after {
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--accent),
-    var(--primary)
-  ) !important;
+  background: linear-gradient(90deg, var(--accent), var(--primary)) !important;
   box-shadow: 0 0 10px rgba(247, 37, 133, 0.6);
 }
 
 .step-container:nth-child(odd):hover::after {
-  background: linear-gradient(
-    270deg,
-    var(--accent),
-    var(--primary)
-  ) !important;
+  background: linear-gradient(270deg, var(--accent), var(--primary)) !important;
 }
 
-/* Passos ímpares (à esquerda) */
-.step-container:nth-child(odd) .step {
-  order: 1;
-}
+/* Ordem dos elementos por posição */
+.step-container:nth-child(odd) .step            { order: 1; }
+.step-container:nth-child(odd) .timeline-marker { left: 50%; transform: translateX(-50%); }
+.step-container:nth-child(odd) .step-illustration { order: 2; }
 
-.step-container:nth-child(odd) .timeline-marker {
-  left: 50%;
-  transform: translateX(-50%);
-}
+.step-container:nth-child(even) .step            { order: 2; }
+.step-container:nth-child(even) .timeline-marker { left: 50%; transform: translateX(-50%); }
+.step-container:nth-child(even) .step-illustration { order: 1; }
 
-.step-container:nth-child(odd) .step-illustration {
-  order: 2;
-}
+/* ============================================
+   Ícones de Ilustração
+   ============================================ */
 
-/* Passos pares (à direita) */
-.step-container:nth-child(even) .step {
-  order: 2;
-}
-
-.step-container:nth-child(even) .timeline-marker {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.step-container:nth-child(even) .step-illustration {
-  order: 1;
-}
-
-/* Estilos para os ícones - Reduzidos */
 .step-illustration {
   width: 45%;
   display: flex;
@@ -362,64 +337,177 @@
   text-shadow: 0 0 20px currentColor;
 }
 
-/* Cores específicas para cada tecnologia */
+/* ============================================
+   Cores dos Ícones por Tecnologia
+   ============================================ */
+
+/* Genéricos / utilitários */
 .step-illustration .fa-shield-alt,
 .step-illustration .fa-link,
-.resource-link .fa-link { 
-  color: gray;
+.resource-link .fa-link {
+  color: #6c757d;
 }
 
+/* Ícones de navegação / web */
+.step-illustration .fa-globe {
+  color: #4fc3f7;
+}
+
+.step-illustration .fa-window-restore,
+.step-illustration .bi-window {
+  color: #41b883;
+}
+
+/* HTML / Java */
 .step-illustration .fa-html5,
 .step-illustration .bi-filetype-java {
   color: #e34f26;
 }
 
+/* CSS */
 .step-illustration .fa-css3-alt,
 .step-illustration .fa-css3 {
   color: #264de4;
 }
 
+/* JavaScript */
 .step-illustration .fa-square-js,
 .step-illustration .bi-filetype-js {
   color: #f7df1e;
 }
 
-.step-illustration .fa-github {
-  color: #171515;
-}
-
-.step-illustration .fa-react,
-.step-illustration .fa-server {
-  color: #61dafb;
-}
-
-.step-illustration .fa-bootstrap {
-  color: #563d7c;
-}
-
-.step-illustration .bi-typescript {
+/* TypeScript */
+.step-illustration .bi-typescript,
+.step-illustration .bi-filetype-tsx {
   color: #2f74c0;
 }
 
-.step-illustration .fa-screwdriver-wrench,
-.step-illustration .fa-tools {
-  color: #6c757d;
+/* GitHub / Git */
+.step-illustration .fa-github {
+  color: #e0e0e0;
 }
 
-.step-illustration .fa-vuejs,
-.step-illustration .bi-window {
+/* React / Tecnologias de servidor */
+.step-illustration .fa-react {
+  color: #61dafb;
+}
+
+/* Node.js */
+.step-illustration .fa-node-js {
+  color: #68a063;
+}
+
+/* Python */
+.step-illustration .fa-python {
+  color: #ffd43b;
+}
+
+/* Vue.js */
+.step-illustration .fa-vuejs {
   color: #41b883;
 }
 
+/* Angular */
 .step-illustration .fa-angular {
   color: #dd0031;
 }
 
+/* Java */
 .step-illustration .fa-java {
   color: #007396;
 }
 
-/* Para ícones com múltiplos elementos - Compactado */
+/* Bootstrap */
+.step-illustration .fa-bootstrap {
+  color: #563d7c;
+}
+
+/* Docker */
+.step-illustration .fa-docker {
+  color: #2496ed;
+}
+
+/* Banco de dados / servidor */
+.step-illustration .fa-database,
+.step-illustration .fa-server {
+  color: #61dafb;
+}
+
+/* Ferramentas / build */
+.step-illustration .fa-screwdriver-wrench,
+.step-illustration .fa-tools {
+  color: #adb5bd;
+}
+
+/* Segurança */
+.step-illustration .fa-shield-halved {
+  color: #4ade80;
+}
+
+/* Testes */
+.step-illustration .fa-flask {
+  color: #c084fc;
+}
+
+/* Arquitetura / diagramas */
+.step-illustration .fa-diagram-project {
+  color: #fb923c;
+}
+
+/* Performance / velocidade */
+.step-illustration .fa-gauge-high {
+  color: #facc15;
+}
+
+/* Cloud / deploy */
+.step-illustration .fa-cloud {
+  color: #7dd3fc;
+}
+
+/* CI/CD / engrenagens */
+.step-illustration .fa-gears {
+  color: #94a3b8;
+}
+
+/* Chave / autenticação */
+.step-illustration .fa-key {
+  color: #fbbf24;
+}
+
+/* Raio / JS avançado */
+.step-illustration .fa-bolt {
+  color: #facc15;
+}
+
+/* Palette / estilização */
+.step-illustration .fa-palette {
+  color: #f472b6;
+}
+
+/* Next.js - letra N */
+.step-illustration .fa-n {
+  color: #e2e8f0;
+}
+
+/* Lógica / code-branch */
+.step-illustration .fa-code-branch {
+  color: #60a5fa;
+}
+
+/* Cubes / frameworks Python */
+.step-illustration .fa-cubes {
+  color: #a78bfa;
+}
+
+/* Estrela / habilidades complementares */
+.step-illustration .fa-star {
+  color: #fbbf24;
+}
+
+/* ============================================
+   Múltiplos Ícones
+   ============================================ */
+
 .step-illustration.multiple-icons {
   display: flex;
   gap: 15px;
@@ -434,19 +522,14 @@
   transform: translateY(-2px);
 }
 
-.step-illustration.multiple-icons:hover i:nth-child(1) {
-  transition-delay: 0.05s;
-}
+.step-illustration.multiple-icons:hover i:nth-child(1) { transition-delay: 0.05s; }
+.step-illustration.multiple-icons:hover i:nth-child(2) { transition-delay: 0.10s; }
+.step-illustration.multiple-icons:hover i:nth-child(3) { transition-delay: 0.15s; }
 
-.step-illustration.multiple-icons:hover i:nth-child(2) {
-  transition-delay: 0.1s;
-}
+/* ============================================
+   Conteúdo do Card (Step)
+   ============================================ */
 
-.step-illustration.multiple-icons:hover i:nth-child(3) {
-  transition-delay: 0.15s;
-}
-
-/* Header do Step - Compactado */
 .step-header {
   display: flex;
   align-items: center;
@@ -513,7 +596,10 @@
   color: var(--accent);
 }
 
-/* Resources - Compactado */
+/* ============================================
+   Recursos / Cursos
+   ============================================ */
+
 .step-resources {
   margin-top: 1.2rem;
   padding-top: 1rem;
@@ -531,13 +617,13 @@
   color: var(--primary);
   margin: 0;
   transition: color 0.2s;
+  user-select: none;
 }
 
 .resources-title:hover {
   color: var(--accent);
 }
 
-/* Estilos para os links dos recursos */
 .resources-links {
   display: none;
   flex-direction: column;
@@ -551,14 +637,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .resource-category {
@@ -602,7 +682,10 @@
   margin-right: 6px;
 }
 
-/* Botão Voltar ao Topo */
+/* ============================================
+   Botão Voltar ao Topo
+   ============================================ */
+
 .back-to-top {
   position: fixed;
   bottom: 1.5rem;
@@ -647,7 +730,10 @@
   transform: translateY(-3px);
 }
 
-/* Footer - Compactado */
+/* ============================================
+   Footer
+   ============================================ */
+
 .track-footer {
   background: linear-gradient(to right, var(--darker), var(--dark));
   padding: 1.5rem 0;
@@ -686,7 +772,10 @@
   color: var(--accent);
 }
 
-/* Responsividade - Tablet */
+/* ============================================
+   Responsividade — Tablet (≤ 768px)
+   ============================================ */
+
 @media (max-width: 768px) {
   .learning-path::before {
     left: 1.5rem;
@@ -696,7 +785,6 @@
     display: none;
   }
 
-  /* Removendo linhas conectoras no tablet */
   .step-container::after {
     display: none;
   }
@@ -705,17 +793,19 @@
     flex-direction: column;
     margin-bottom: 1.5rem;
   }
-  
-  .step, .step-illustration {
+
+  .step,
+  .step-illustration {
     width: 100%;
     margin: 0 0 1rem 0 !important;
   }
-  
+
   .step {
     padding: 1.2rem;
     margin: 0 0 1.5rem 1.5rem !important;
+    order: 2 !important;
   }
-  
+
   .step-illustration {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -725,15 +815,11 @@
   .step-illustration.multiple-icons i {
     font-size: 2.2rem;
   }
-  
+
   .step-illustration:hover {
     transform: translateY(-1px);
   }
 
-  .step {
-    order: 2 !important;
-  }
-  
   .timeline-marker {
     width: 18px;
     height: 18px;
@@ -755,13 +841,8 @@
     font-size: 1.1rem;
   }
 
-  .step-title {
-    font-size: 1.2rem;
-  }
-
-  .step-subtitle {
-    font-size: 0.85rem;
-  }
+  .step-title   { font-size: 1.2rem; }
+  .step-subtitle { font-size: 0.85rem; }
 
   .step-content {
     font-size: 0.9rem;
@@ -782,25 +863,17 @@
     padding: 0.35rem 0.7rem;
     font-size: 0.75rem;
   }
-  
-  .track-container {
-    padding: 1.2rem;
-  }
-  
-  .track-title {
-    font-size: 2rem;
-  }
-  
-  .track-subtitle {
-    font-size: 0.95rem;
-  }
 
-  .resources-links {
-    gap: 0.6rem;
-  }
+  .track-container { padding: 1.2rem; }
+  .track-title     { font-size: 2rem; }
+  .track-subtitle  { font-size: 0.95rem; }
+  .resources-links { gap: 0.6rem; }
 }
 
-/* Responsividade - Mobile */
+/* ============================================
+   Responsividade — Mobile (≤ 480px)
+   ============================================ */
+
 @media (max-width: 480px) {
   .track-container {
     padding: 1rem;
@@ -832,9 +905,7 @@
     margin-bottom: 1.2rem !important;
   }
 
-  .step-header {
-    gap: 0.6rem;
-  }
+  .step-header { gap: 0.6rem; }
 
   .step-icon {
     width: 35px;
@@ -842,39 +913,25 @@
     font-size: 1rem;
   }
 
-  .step-title {
-    font-size: 1.1rem;
-  }
+  .step-title    { font-size: 1.1rem; }
+  .step-subtitle { font-size: 0.8rem; }
+  .step-content  { font-size: 0.85rem; }
 
-  .step-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .step-content {
-    font-size: 0.85rem;
-  }
-
-  .step-topics li {
-    font-size: 0.8rem;
-  }
+  .step-topics li { font-size: 0.8rem; }
 
   .step-resources {
     padding-top: 0.8rem;
     margin-top: 1rem;
   }
 
-  .resources-title {
-    font-size: 0.85rem;
-  }
+  .resources-title { font-size: 0.85rem; }
 
   .resources-links {
     gap: 0.6rem;
     margin-top: 0.6rem;
   }
 
-  .resource-category h4 {
-    font-size: 0.8rem;
-  }
+  .resource-category h4 { font-size: 0.8rem; }
 
   .resource-link {
     font-size: 0.75rem;
@@ -888,14 +945,9 @@
     left: 1rem;
     bottom: 1rem;
   }
-  
-  .footer-container {
-    padding: 0 1rem;
-  }
 
-  .footer-text {
-    font-size: 0.85rem;
-  }
+  .footer-container { padding: 0 1rem; }
+  .footer-text      { font-size: 0.85rem; }
 
   .tech-icons {
     font-size: 1.3rem;
@@ -903,7 +955,10 @@
   }
 }
 
-/* Telas Grandes */
+/* ============================================
+   Telas Grandes (≥ 1200px)
+   ============================================ */
+
 @media (min-width: 1200px) {
   body::before {
     opacity: 1;
@@ -918,22 +973,12 @@
     margin-bottom: 2.5rem;
   }
 
-  .track-title {
-    font-size: 3rem;
-  }
+  .track-title    { font-size: 3rem; }
+  .track-subtitle { font-size: 1.15rem; max-width: 800px; }
 
-  .track-subtitle {
-    font-size: 1.15rem;
-    max-width: 800px;
-  }
+  .learning-path { padding: 2rem 0; }
 
-  .learning-path {
-    padding: 2rem 0;
-  }
-
-  .step-container {
-    margin-bottom: 2.5rem;
-  }
+  .step-container { margin-bottom: 2.5rem; }
 
   .step {
     width: 45%;
@@ -946,25 +991,14 @@
     font-size: 1.5rem;
   }
 
-  .step-title {
-    font-size: 1.5rem;
-  }
+  .step-title   { font-size: 1.5rem; }
+  .step-content { font-size: 1rem; }
 
-  .step-content {
-    font-size: 1rem;
-  }
+  .step-topics li { font-size: 0.95rem; }
 
-  .step-topics li {
-    font-size: 0.95rem;
-  }
+  .step-illustration { font-size: 4.5rem; }
 
-  .step-illustration {
-    font-size: 4.5rem;
-  }
-
-  .step-illustration.multiple-icons i {
-    font-size: 3.3rem;
-  }
+  .step-illustration.multiple-icons i { font-size: 3.3rem; }
 
   .track-footer {
     padding: 2rem 0;
@@ -975,38 +1009,32 @@
     font-size: 1.8rem;
     gap: 1.5rem;
   }
-  
+
   .footer-container {
     max-width: 1400px;
     padding: 0 2rem;
   }
 }
 
-/* Telas Muito Grandes */
+/* ============================================
+   Telas Muito Grandes (≥ 1600px)
+   ============================================ */
+
 @media (min-width: 1600px) {
   .track-container {
     max-width: 1500px;
     padding: 2.5rem;
   }
 
-  .track-title {
-    font-size: 3.5rem;
-  }
+  .track-title    { font-size: 3.5rem; }
+  .track-subtitle { font-size: 1.3rem; max-width: 900px; }
 
-  .step, .step-illustration {
+  .step,
+  .step-illustration {
     width: 43%;
   }
 
-  .track-subtitle {
-    font-size: 1.3rem;
-    max-width: 900px;
-  }
+  .step { padding: 2.2rem; }
 
-  .step {
-    padding: 2.2rem;
-  }
-  
-  .footer-container {
-    max-width: 1500px;
-  }
+  .footer-container { max-width: 1500px; }
 }
