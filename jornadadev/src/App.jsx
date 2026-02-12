@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/trilha-dev/">
       <Routes>
         {/* LAYOUT PRINCIPAL */}
         <Route element={<AppLayout />}>
