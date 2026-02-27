@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 import useTracksEffect from "../hooks/useTracksEffect.js";
-
+import { useState } from "react";
 export default function Full() {
   const { showBackToTop, scrollToTop, expandedResources, toggleResource } = useTracksEffect();
-
+  const [conteudo, setConteudo] = useState("Home");
   return (
     <>
       <div className="track-container">
         <header className="track-header">
           <nav>
             <Link to="/">
-              <button className="track-home-btn">
-                <i className="fa-solid fa-house"></i> Home
+              <button
+                className="track-home-btn"
+                onMouseEnter={() => setConteudo("Voltar")}
+                onMouseLeave={() => setConteudo("Home")}
+              >
+                <i className="fa-solid fa-house"></i> {conteudo}
               </button>
             </Link>
           </nav>
@@ -61,13 +65,13 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step1"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - A Internet por Baixo dos Panos
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Básico de HTTP - Verbos e Status Codes
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> MDN - Visão Geral do HTTP (Documentação)
                     </a>
                   </div>
@@ -115,19 +119,19 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step2"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - Lógica de Programação
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/logica-de-programacao" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Lógica de Programação do Zero
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-logica-de-programacao" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação Lógica de Programação
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/curso-de-logica-de-programacao-o-que-seu-instructor-nao-te-conta/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Lógica de Programação Completa
                     </a>
                   </div>
@@ -176,28 +180,28 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step3"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>HTML5</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - HTML5 (Gustavo Guanabara)
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> MDN Web Docs - HTML (Documentação)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>CSS Moderno</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - CSS3
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.origamid.com/curso/css-flexbox/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Origamid - Flexbox e Grid (Documentação interativa)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-html-css" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação HTML e CSS
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.origamid.com/curso/css-com-sass/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Origamid - CSS com SASS
                     </a>
                   </div>
@@ -248,25 +252,25 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step4"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - JavaScript (Gustavo Guanabara)
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@ProgramacaoWeb" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Programação Web - JavaScript Completo
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://javascript.info/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> JavaScript.info - Tutorial Moderno (Documentação)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/javascript-completo-es6-es7-es8/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - JavaScript Completo ES6+
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.origamid.com/curso/javascript-completo-es6/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Origamid - JavaScript Completo
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-js-backend" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação JavaScript
                     </a>
                   </div>
@@ -315,19 +319,19 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step5"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - JavaScript Assíncrono
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://javascript.info/async" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> JavaScript.info - Promises e Async/Await
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/advanced-javascript-concepts/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - JavaScript: The Advanced Concepts
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.origamid.com/curso/javascript-es6-avancado/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Origamid - JavaScript Avançado
                     </a>
                   </div>
@@ -376,22 +380,22 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step6"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.cursoemvideo.com/curso/curso-de-git-e-github/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - Git e GitHub
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/git-e-github-para-iniciantes/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Willian Justen - Git e GitHub para Iniciantes
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial do Git
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/git-e-github-do-basico-ao-avancado-c-gist-e-github-pages/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Git e GitHub do Básico ao Avançado
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-git-github" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação Git e GitHub
                     </a>
                   </div>
@@ -439,22 +443,22 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step7"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/typescript" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Diego Fernandes - TypeScript do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial TypeScript
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.totaltypescript.com/tutorials" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Matt Pocock - Total TypeScript (Tutoriais Gratuitos)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/typescript-o-guia-completo/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - TypeScript: O Guia Completo
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-typescript" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação TypeScript
                     </a>
                   </div>
@@ -505,25 +509,25 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step8"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@ProgramacaoWeb" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Programação Web - Curso de React para Iniciantes
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/events/nlw" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - NLW React
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial React (react.dev)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - React: The Complete Guide
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.origamid.com/curso/react-completo/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Origamid - React Completo
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Ignite React
                     </a>
                   </div>
@@ -573,22 +577,22 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step9"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/nextjs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Next.js do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Next.js (nextjs.org)
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://nextjs.org/learn" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Vercel - Tutorial Oficial Next.js
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
-                      <i className="fa-solid fa-link"></i> Udemy - Next.js & React: The Complete Guide
+                    <a href="https://www.udemy.com/course/nextjs-react-the-complete-guide/" target="_blank" rel="noopener noreferrer" className="resource-link">
+                      <i className="fa-solid fa-link"></i> Udemy - Next.js &amp; React: The Complete Guide
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Ignite Next.js
                     </a>
                   </div>
@@ -638,31 +642,31 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step10"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Node.js</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/nodejs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Node.js do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://nodejs.org/pt/docs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial do Node.js
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Express e Fastify</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - API REST com Express e TypeScript
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://expressjs.com/pt-br/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Express.js
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://fastify.dev/docs/latest/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Fastify
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/nodejs-the-complete-guide/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Node.js: The Complete Guide
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Ignite Node.js
                     </a>
                   </div>
@@ -711,31 +715,31 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step11"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Python</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - Python (Gustavo Guanabara)
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.python.org/pt-br/3/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Python (python.org)
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>FastAPI e Django</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial FastAPI
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@gregoriobonfante" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Gregório Bonfante - Django do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.djangoproject.com/pt-br/5.0/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Django
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/python-3-do-zero-ao-avancado/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Python 3 Completo: do Básico ao Avançado
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-django" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação Python e Django
                     </a>
                   </div>
@@ -786,28 +790,28 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step12"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Bancos Relacionais</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/playlist?list=PLucm8g_ezqNoAkYKXN_zWupyH6hQCAwxY" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Boson Treinamentos - PostgreSQL do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.cursoemvideo.com/curso/mysql/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Curso em Vídeo - MySQL
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>NoSQL e Cache</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@natanielpaiva" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Nataniel Paiva - MongoDB para Iniciantes
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://redis.io/docs/latest/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Redis
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>ORMs</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Prisma ORM na Prática
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.prisma.io/docs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Prisma
                     </a>
                   </div>
@@ -858,25 +862,25 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step13"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Autenticação</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/jwt" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - JWT do Zero ao Avançado
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - OAuth 2.0 Explicado
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Segurança Web</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Cassio Batista - Série OWASP Top 10
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - Evitando XSS
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - Criptografia na Prática
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@diasdedev" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - Cookies e Segurança
                     </a>
                   </div>
@@ -925,25 +929,25 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step14"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Front-end</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://testing-library.com/docs/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação React Testing Library
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Cypress - Do Zero ao Reporte
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://playwright.dev/docs/intro" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Playwright
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Back-end</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - Testes com Jest e Supertest
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.pytest.org/en/stable/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Pytest
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://vitest.dev/guide/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Vitest
                     </a>
                   </div>
@@ -993,22 +997,22 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step15"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Grátis</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@FullCycle" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Full Cycle - Clean Architecture na Prática
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/ignite" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - SOLID e Design Patterns em Node.js
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://app.rocketseat.com.br/discover/trilhas/graphql" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Rocketseat - GraphQL na Prática
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/clean-architecture-na-pratica/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Clean Architecture com Node.js
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://fullcycle.com.br/imersao-full-stack-full-cycle/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Full Cycle - Imersão Full Stack e Full Cycle
                     </a>
                   </div>
@@ -1058,43 +1062,43 @@ export default function Full() {
                 <div className={`resources-links ${expandedResources["fullstack-step16"] ? "show" : ""}`}>
                   <div className="resource-category">
                     <h4>Docker</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@fabricioveronez" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Fabricio Veronez - Docker do Zero
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Oficial Docker
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>CI/CD</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.github.com/pt/actions" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Dias de DEV - GitHub Actions na Prática
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@FullCycle" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Full Cycle - Deploy com GitOps e ArgoCD
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@fabricioveronez" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Fabricio Veronez - Jenkins na Prática
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Cloud e Deploy</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.youtube.com/@fabricioveronez" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Fabricio Veronez - AWS para Devs
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Documentação Vercel
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://docs.sentry.io/platforms/javascript/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Sentry - Monitoramento de Erros no Full-Stack
                     </a>
                   </div>
                   <div className="resource-category">
                     <h4>Pagos</h4>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.udemy.com/course/docker-ferramenta-essencial-para-desenvolvedores/" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Udemy - Docker: Ferramenta Essencial para Devs
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="resource-link">
+                    <a href="https://www.alura.com.br/formacao-devops" target="_blank" rel="noopener noreferrer" className="resource-link">
                       <i className="fa-solid fa-link"></i> Alura - Formação DevOps
                     </a>
                   </div>
