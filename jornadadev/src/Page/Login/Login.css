@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:       #0d0f12;
+  --surface:  #13161b;
+  --border:   #1f2229;
+  --accent:   #4f7cff;
+  --text:     #e8eaf0;
+  --muted:    #4b5263;
+  --soft:     #7c8596;
+  --danger:   rgba(255,80,80,0.85);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  font-family: 'Sora', sans-serif;
+  padding: 2rem 1rem;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  animation: rise 0.45s cubic-bezier(.22,.68,0,1.2) both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo ── */
+.login-logo {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 2.8rem;
+}
+.login-logo span { color: var(--accent); }
+
+/* ── Título ── */
+.login-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+.login-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ── Campos ── */
+.login-field {
+  margin-bottom: 0.9rem;
+}
+.login-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--soft);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.login-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.login-input::placeholder { color: var(--muted); }
+.login-input:focus { border-color: var(--accent); }
+
+/* ── Erro ── */
+.login-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+  margin-bottom: 1rem;
+  padding-left: 0.1rem;
+}
+
+/* ── Botão ── */
+.login-btn {
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.72rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.login-btn:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+.login-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.spinner {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Divisor ── */
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.6rem 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Rodapé ── */
+.login-footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.login-footer button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+.login-footer button:hover { opacity: 0.75; }
