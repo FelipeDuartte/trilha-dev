@@ -42,7 +42,7 @@ function About() {
                     que percorri para aprender.
                   </p>
                   <a
-                    href="https://github.com/seuuser"
+                    href="https://github.com/felipeduartte"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-tech-github"

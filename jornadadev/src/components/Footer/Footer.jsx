@@ -31,7 +31,7 @@ function Footer() {
               <h3 className="footer-title h5 mb-3">Links Rápidos</h3>
               <ul className="list-unstyled footer-list">
                 <li className="mb-2">
-                  <a href="#home" className="links">
+                  <a href="#" className="links">
                     <span className="link-bullet"></span>
                     Início
                   </a>
@@ -43,9 +43,9 @@ function Footer() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="#resources" className="links">
+                  <a href="#contact-support" className="links">
                     <span className="link-bullet"></span>
-                    Recursos
+                    Duvidas
                   </a>
                 </li>
                 <li>
@@ -69,13 +69,14 @@ function Footer() {
                 </li>
                 <li className="d-flex align-items-center gap-2">
                   <div className="contact-icon">
-                    <i className="bi bi-instagram"></i>
+                    <i className="bi bi-whatsapp"></i>
                   </div>
                   <a 
-                    href="#" 
+                    href="https://wa.me/5531999450717" 
+                    target="_blank"
                     className="contact-link text-decoration-none"
                   >
-                    @fduarte.dev
+                    (31) 9 9945-0717
                   </a>
                 </li>
               </ul>
@@ -85,19 +86,13 @@ function Footer() {
             <div className="col-lg-3">
               <h3 className="footer-title h5 mb-3">Redes Sociais</h3>
               <div className="social-icons d-flex gap-3">
-                <a href="#" className="social-link" aria-label="GitHub">
-                  <div className="social-icon-wrapper">
-                    <i className="bi bi-github"></i>
-                    <div className="social-glow"></div>
-                  </div>
-                </a>
-                <a href="#" className="social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com/fduarte.dev/" target="_blank" className="social-link" aria-label="Instagram">
                   <div className="social-icon-wrapper">
                     <i className="bi bi-instagram"></i>
                     <div className="social-glow"></div>
                   </div>
                 </a>
-                <a href="#" className="social-link" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@f.duartee" className="social-link" aria-label="TikTok">
                   <div className="social-icon-wrapper">
                     <i className="bi bi-tiktok"></i>
                     <div className="social-glow"></div>
@@ -122,7 +117,7 @@ function Footer() {
             <p className="small mb-0">
               <span className="text-secondary-tech">Desenvolvido por </span>
               <a 
-                href="https://felipeduartte.github.io/my-portfolio/" 
+                href="https://felipeduartte.github.io/Portfolio/" 
                 className="dev-link text-decoration-none"
                 target="_blank"
                 rel="noopener noreferrer"

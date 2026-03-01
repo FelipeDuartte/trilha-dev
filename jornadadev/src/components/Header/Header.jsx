@@ -42,11 +42,6 @@ function Header() {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
                   <li className="nav-item">
-                    <a href="#hero" className="nav-link d-flex align-items-center gap-2">
-                      <i className="fas fa-rocket"></i> Inicio
-                    </a>
-                  </li>
-                  <li className="nav-item">
                     <a href="#tracks" className="nav-link d-flex align-items-center gap-2">
                       <i className="fas fa-project-diagram"></i> Trilhas
                     </a>
@@ -61,8 +56,7 @@ function Header() {
                       <i className="fas fa-user-astronaut"></i> Sobre
                     </a>
                   </li>
-
-                  {/* — Área de autenticação — */}
+                    {/* — Área de autenticação — */}
                   {user ? (
                     // Logado: mostra nome + botão sair
                     <li className="nav-item d-flex align-items-center gap-3">
@@ -80,7 +74,7 @@ function Header() {
                   ) : (
                     // Deslogado: botão que leva para /login
                     <li className="nav-item">
-                      <Link to="/login" className="btn btn-primary btn-sm px-3">
+                      <Link to="/login" className="btn btn-outline-primary text-white border border-primary btn-sm px-3">
                         <i className="fas fa-sign-in-alt me-1"></i> Entrar
                       </Link>
                     </li>

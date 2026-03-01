@@ -44,8 +44,8 @@ function Login() {
     }
   };
 
-  const switchMode = () => {
-    setIsRegister(!isRegister);
+  const switchMode = (mode) => {
+    setIsRegister(mode);
     setError(""); setName(""); setEmail(""); setPassword("");
   };
 
@@ -53,26 +53,64 @@ function Login() {
     <div className="login-page">
       <div className="login-box">
 
-        <div className="login-logo">Jornada<span>DEV</span></div>
+        {/* Voltar */}
+        <button className="login-back" onClick={() => navigate(-1)}>
+          <i className="fas fa-arrow-left"></i> Voltar
+        </button>
 
+        {/* Logo — coloque sua imagem em /public/logo.png */}
+        <div className="login-logo-wrapper">
+          <img
+            src="/logo.png"
+            alt="JornadaDEV"
+            className="login-logo-img"
+            onError={(e) => { e.target.style.display = "none"; }}
+          />
+          <div className="login-logo">Jornada<span>DEV</span></div>
+        </div>
+
+        {/* Título */}
         <h1 className="login-title">
-          {isRegister ? "Criar conta" : "Entrar"}
+          {isRegister ? "Crie sua conta" : "Bem-vindo de volta"}
         </h1>
         <p className="login-sub">
           {isRegister
             ? "Preencha os dados abaixo para começar."
-            : "Informe suas credenciais para continuar."}
+            : "Entre para continuar sua jornada."}
         </p>
 
-        {error && <p className="login-error">{error}</p>}
+        {/* Abas */}
+        <div className="login-tabs">
+          <button
+            className={`login-tab ${!isRegister ? "active" : ""}`}
+            onClick={() => switchMode(false)}
+          >
+            Entrar
+          </button>
+          <button
+            className={`login-tab ${isRegister ? "active" : ""}`}
+            onClick={() => switchMode(true)}
+          >
+            Criar conta
+          </button>
+        </div>
 
+        {/* Erro */}
+        {error && (
+          <div className="login-error">
+            <i className="fas fa-circle-exclamation"></i>
+            {error}
+          </div>
+        )}
+
+        {/* Formulário */}
         <form onSubmit={handleSubmit}>
           {isRegister && (
             <div className="login-field">
               <label className="login-label">Nome</label>
               <input
                 type="text" className="login-input"
-                placeholder="Seu nome" value={name}
+                placeholder="Seu nome completo" value={name}
                 onChange={(e) => setName(e.target.value)} required
               />
             </div>
@@ -106,7 +144,7 @@ function Login() {
 
         <p className="login-footer">
           {isRegister ? "Já tem conta? " : "Não tem conta? "}
-          <button onClick={switchMode}>
+          <button onClick={() => switchMode(!isRegister)}>
             {isRegister ? "Entrar" : "Criar conta"}
           </button>
         </p>
