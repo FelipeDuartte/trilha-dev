@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { useEffect, useRef } from "react";
-
+import videoSrc from "../../assets/jornadadev.mp4";
 function Hero() {
   const typingTitleRef = useRef(null);
 
@@ -61,11 +61,12 @@ function Hero() {
               <div className="video-wrapper">
                 <div className="video-container rounded-4">
                   <video
-                    className="video-hero rounded-4"
-                    src=""
+                    className="video-hero rounded-4"  
+                    src={videoSrc}
                     playsinline
                     controls
-                  ></video>
+                  >
+                  </video>
                 </div>
               </div>
             </div>
