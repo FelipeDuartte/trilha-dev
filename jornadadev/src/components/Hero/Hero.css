@@ -178,6 +178,7 @@ video::-webkit-media-controls-fullscreen-button {
 
 @media (max-width: 768px) {
   #hero {
+    padding: 0px 30px;
     min-height: auto;
   }
   
@@ -191,7 +192,7 @@ video::-webkit-media-controls-fullscreen-button {
   }
   
   .btnExplorarTrilha {
-    width: 100%;
+    display: none !important;
   }
 }
 
