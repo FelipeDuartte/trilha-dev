@@ -68,14 +68,14 @@ function Header() {
                         onClick={handleLogout}
                         className="btn btn-outline-danger btn-sm px-3"
                       >
-                        <i className="fas fa-sign-out-alt me-1"></i> Sair
+                        <i className="fas fa-sign-out-alt me-1"></i> Logout
                       </button>
                     </li>
                   ) : (
                     // Deslogado: botão que leva para /login
                     <li className="nav-item">
                       <Link to="/login" className="btn btn-outline-primary text-white border border-primary btn-sm px-3">
-                        <i className="fas fa-sign-in-alt me-1"></i> Entrar
+                        <i className="fas fa-sign-in-alt me-1"></i> Login
                       </Link>
                     </li>
                   )}
