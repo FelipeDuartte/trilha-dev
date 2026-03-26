@@ -1,9 +1,11 @@
 import "./Hero.css";
 import { useEffect, useRef } from "react";
-import videoSrc from "../../assets/jornadadev.mp4";
+import videoSm from "../../assets/jornadaSm.mp4";
+
 function Hero() {
   const typingTitleRef = useRef(null);
 
+  // Typing effect
   useEffect(() => {
     const element = typingTitleRef.current;
     if (!element) return;
@@ -18,7 +20,7 @@ function Hero() {
         const current = fullText.substring(0, i + 1);
         const formatted = current.replace(
           highlight,
-          '<span class="gradient-text-hero">' + highlight + "</span>",
+          `<span class="gradient-text-hero">${highlight}</span>`,
         );
         element.innerHTML = formatted;
         i++;
@@ -57,15 +59,11 @@ function Hero() {
               </div>
             </div>
 
-            <div className="col-lg-6 pb-4">
-              <div className="video-wrapper">
-                <div className="video-container rounded-4">
-                  <video
-                    className="video-hero rounded-4"  
-                    src={videoSrc}
-                    playsinline
-                    controls
-                  >
+            <div className="col-lg-6 pb-4 ">
+              <div className="video-wrapper d-flex align-itens-center justify-content-center">
+                <div className="video-container rounded-4 d-flex align-itens-center justify-content-center">
+                  <video className="video-hero rounded-4" playsInline controls>
+                    <source src={videoSm} alt="video-intro" />
                   </video>
                 </div>
               </div>
