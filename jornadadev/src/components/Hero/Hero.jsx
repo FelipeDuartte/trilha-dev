@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { useEffect, useRef } from "react";
 import videoSm from "../../assets/jornadaSm.mp4";
-
+import iconjornada from "../../assets/icone_full.png"
 function Hero() {
   const typingTitleRef = useRef(null);
 
@@ -82,6 +82,7 @@ function Hero() {
             <div className="video-inner">
               <video
                 className="video-hero"
+                poster={iconjornada}
                 playsInline
                 controls
                 preload="metadata"
