@@ -67,18 +67,7 @@ function Footer() {
                   </div>
                   <span className="contact-text">Duarte.dev@outlook.com</span>
                 </li>
-                <li className="d-flex align-items-center gap-2">
-                  <div className="contact-icon">
-                    <i className="bi bi-whatsapp"></i>
-                  </div>
-                  <a 
-                    href="https://wa.me/5531999450717" 
-                    target="_blank"
-                    className="contact-link text-decoration-none"
-                  >
-                    (31) 9 9945-0717
-                  </a>
-                </li>
+                
               </ul>
             </div>
 

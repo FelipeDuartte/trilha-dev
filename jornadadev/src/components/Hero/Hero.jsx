@@ -5,7 +5,6 @@ import videoSm from "../../assets/jornadaSm.mp4";
 function Hero() {
   const typingTitleRef = useRef(null);
 
-  // Typing effect
   useEffect(() => {
     const element = typingTitleRef.current;
     if (!element) return;
@@ -14,64 +13,90 @@ function Hero() {
     const highlight = "Seu guia gratuito";
     const typingSpeed = 60;
     let i = 0;
+    let timeout;
 
     function typeWriter() {
       if (i < fullText.length) {
         const current = fullText.substring(0, i + 1);
         const formatted = current.replace(
           highlight,
-          `<span class="gradient-text-hero">${highlight}</span>`,
+          `<span class="gradient-text-hero">${highlight}</span>`
         );
         element.innerHTML = formatted;
         i++;
-        setTimeout(typeWriter, typingSpeed);
+        timeout = setTimeout(typeWriter, typingSpeed);
       }
     }
 
     element.innerHTML = "";
     typeWriter();
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <>
-      <section
-        id="hero"
-        className="d-flex align-items-center justify-content-center pt-5 mb-5 position-relative overflow-hidden"
-      >
-        <div className="container pt-5 position-relative">
-          <div className="row align-items-center justify-content-between g-4">
-            <div className="col-lg-6 text-lg-start pt-4">
-              <h1 ref={typingTitleRef} className="display-4 fw-bold mb-4"></h1>
+    <section id="hero">
+      {/* Background decorations */}
+      <div className="hero-bg" aria-hidden="true">
+        <div className="hero-orb-1" />
+        <div className="hero-orb-2" />
+      </div>
 
-              <p className="mb-4 fs-6 p-hero">
-                Aprenda de forma gratuita as tecnologias que estão moldando o
-                futuro
-              </p>
+      <div className="hero-inner ">
+        {/* ── LEFT: Copy ── */}
+        <div className="hero-copy">
+<h1 ref={typingTitleRef} className="hero-title" />
 
-              <div className="gap-3 my-4">
-                <a
-                  href="#tracks"
-                  className="btn btnExplorarTrilha btn-primary btn-lg px-4 py-3 d-inline-flex justify-content-center align-items-center fw-bold"
-                >
-                  <span>Explorar Trilhas</span>
-                  <i className="bi bi-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
+          <p className="hero-desc">
+            Aprenda de forma gratuita as tecnologias que estão moldando o futuro
+            — de zero até o mercado de trabalho.
+          </p>
 
-            <div className="col-lg-6 pb-4 ">
-              <div className="video-wrapper d-flex align-itens-center justify-content-center">
-                <div className="video-container rounded-4 d-flex align-itens-center justify-content-center">
-                  <video className="video-hero rounded-4" playsInline controls>
-                    <source src={videoSm} alt="video-intro" />
-                  </video>
-                </div>
+          <div className="hero-cta-group">
+            <a
+              href="#tracks"
+              className="btn-hero-primary"
+            >
+              <span>Explorar Trilhas</span>
+              <i className="bi bi-arrow-right" aria-hidden="true" />
+            </a>
+            <span className="hero-scroll-hint">Role para ver mais</span>
+          </div>
+
+          <div className="hero-stats">
+            <div className="hero-stat-pill">
+              <span className="pill-icon"><i className="bi bi-patch-check-fill" /></span>
+              <div>
+                <strong>100% Gratuito</strong>
+                <p>com as melhores <em className="highlight-videaula">videoaulas</em></p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* ── RIGHT: Video ── */}
+        <div className="hero-visual">
+          <div className="hero-visual-bg-card" aria-hidden="true" />
+
+          <div className="video-container">
+            <div className="video-inner">
+              <video
+                className="video-hero"
+                playsInline
+                controls
+                preload="metadata"
+                aria-label="Vídeo de introdução à Jornada Tech"
+              >
+                <source src={videoSm} type="video/mp4" />
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
   );
 }
 
